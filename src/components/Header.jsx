@@ -29,7 +29,7 @@ export default function Header(){
 
     return(
 
-        <div className="antialiased z-[9999]">
+        <div className="antialiased z-[9999]" style={{userSelect: "none"}}>
             
 {/* main box  */}
 <div>
@@ -67,9 +67,9 @@ export default function Header(){
     </div>
 
     <div className="flex justify-between gap-3">
-        <Link href={``} className="font-bold hover:text-red-500 text-gray-500">Login</Link>
+        <Link href={`/login`} className="font-bold hover:text-red-500 text-gray-500">Login</Link>
         <p> | </p>
-        <Link href={``} className="font-bold hover:text-red-500 text-gray-500">Register</Link>
+        <Link href={`/register`} className="font-bold hover:text-red-500 text-gray-500">Register</Link>
         <Link href={``} className="text-gray-500 hover:text-red-500 font-black">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6"><path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
         </Link>
@@ -114,13 +114,19 @@ export default function Header(){
         animate={{ x: 0 }}
         exit={{ x: -300 }}
         transition={{ type: "spring",  damping: 20 }}
+         onClick={(e)=> {
+          if(e.target === e.currentTarget){
+            setsidebarcl(false)
+            setsideDropdown(null)
+          }
+        }}
         className=" fixed inset-0 z-[9999] transition-opacity duration-300">
             <div className={`flex flex-col fixed left-0 top-0 h-full bg-white w-56 md:w-80
                 transform transition-transform duration-300 ${sidebarcl ? "translate-x-0" : "-translate-x-full"} `}>
                 <p className="md:text-[20px] p-2 font-black text-[20px]">KAWSARSHOP</p>
                 <div className="flex p-2 items-center justify-between">
                     <p className="text-[17px] font-semibold">Shop By Categories</p>
-                    <FontAwesomeIcon icon={faXmark} className="cursor-pointer" onClick={()=> setsidebarcl(false)}/>
+                    <FontAwesomeIcon icon={faXmark} className="cursor-pointer" onClick={()=> {setsidebarcl(false); setsideDropdown(null)}}/>
                 </div>
 
 
@@ -312,7 +318,7 @@ export default function Header(){
 
 
 <button className="cursor-pointer hover:bg-black  bg-red-700 text-white p-2 rounded-lg">
-    <Link href={``}>Login</Link>
+    <Link href={`/login`}>Login</Link>
 </button>
 
 
@@ -348,8 +354,11 @@ export default function Header(){
    <Link href={``} className=" hover:text-red-500 cursor-pointer"> Fashion</Link>
    
     <ul 
-    className="absolute top-10 left-0 min-w-[180px] bg-white flex flex-col shadow-lg rounded-lg 
-    items-start opacity-0 gap-2 pt-3 pb-4 pl-2 pointer-events-none scale-95  group-hover:pointer-events-auto   group-hover:opacity-100 group-hover:scale-100  transition-all duration-300 ease-in-out z-20">
+    className="absolute top-full left-0 min-w-[180px] bg-white shadow-lg rounded-lg 
+    flex flex-col items-start gap-2 py-3 pl-3 mt-1 
+    opacity-0 scale-95 pointer-events-none
+    group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
+    transition-all duration-300 ease-out z-50">
         <Link href={``} className=" hover:text-red-500 cursor-pointer">Women</Link>
         <Link href={``} className=" hover:text-red-500 cursor-pointer">Girls</Link>
         <Link href={``} className=" hover:text-red-500 cursor-pointer">Men</Link>
@@ -364,8 +373,11 @@ export default function Header(){
    <Link href={``} className=" hover:text-red-500 cursor-pointer"> Electronics</Link>
    
     <ul 
-    className="absolute top-10 left-0 min-w-[180px] bg-white flex flex-col shadow-lg rounded-lg 
-    items-start opacity-0 gap-2 pt-3 pb-4 pl-2 scale-95 pointer-events-none  group-hover:pointer-events-auto  group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 ease-in-out z-20">
+     className="absolute top-full left-0 min-w-[180px] bg-white shadow-lg rounded-lg 
+    flex flex-col items-start gap-2 py-3 pl-3 mt-1 
+    opacity-0 scale-95 pointer-events-none
+    group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
+    transition-all duration-300 ease-out z-50">
         <Link href={``} className=" hover:text-red-500 cursor-pointer">Mobile</Link>
         <Link href={``} className=" hover:text-red-500 cursor-pointer">Leptops</Link>
         <Link href={``} className=" hover:text-red-500 cursor-pointer">Smart Watch</Link>
@@ -381,8 +393,11 @@ export default function Header(){
    <Link href={``} className=" hover:text-red-500 cursor-pointer"> Bags</Link>
    
     <ul 
-    className="absolute top-10 left-0 min-w-[180px] bg-white flex flex-col shadow-lg rounded-lg 
-    items-start opacity-0 gap-2 pt-3 pb-4 pl-2 scale-95 pointer-events-none  group-hover:pointer-events-auto  group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 ease-in-out z-20">
+     className="absolute top-full left-0 min-w-[180px] bg-white shadow-lg rounded-lg 
+    flex flex-col items-start gap-2 py-3 pl-3 mt-1 
+    opacity-0 scale-95 pointer-events-none
+    group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
+    transition-all duration-300 ease-out z-50">
         <Link href={``} className=" hover:text-red-500 cursor-pointer">Men Bags</Link>
         <Link href={``} className=" hover:text-red-500 cursor-pointer">Women Bags</Link>
 </ul>
@@ -395,9 +410,12 @@ export default function Header(){
    <Link href={``} className=" hover:text-red-500 cursor-pointer"> Footwear</Link>
    
     <ul 
-    className="absolute top-10 left-0 min-w-[180px] bg-white flex flex-col shadow-lg rounded-lg 
-    items-start opacity-0 gap-2 pt-3 pb-4 pl-2 scale-95 pointer-events-none  group-hover:pointer-events-auto  group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 ease-in-out z-20">
-        <Link href={``} className=" hover:text-red-500 cursor-pointer">Men Footwear</Link>
+    className="absolute top-full left-0 min-w-[180px] bg-white shadow-lg rounded-lg 
+    flex flex-col items-start gap-2 py-3 pl-3 mt-1 
+    opacity-0 scale-95 pointer-events-none
+    group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
+    transition-all duration-300 ease-out z-50">
+             <Link href={``} className=" hover:text-red-500 cursor-pointer">Men Footwear</Link>
         <Link href={``} className=" hover:text-red-500 cursor-pointer">Women Footwear</Link>
 </ul>
 </div>
@@ -473,13 +491,19 @@ Jewellery
         animate={{ x: 0 }}
         exit={{ x: -300 }}
         transition={{ type: "spring",  damping: 20 }}
+        onClick={(e)=> {
+          if(e.target === e.currentTarget){
+            setsidebarcl(false)
+            setsideDropdown(null)
+          }
+        }}
         className=" fixed inset-0 z-[9999] transition-opacity duration-300">
             <div className={`flex flex-col fixed left-0 top-0 h-full bg-white w-56 md:w-80
                 transform transition-transform duration-300 ${sidebarcl ? "translate-x-0" : "-translate-x-full"} `}>
                 <p className="md:text-[20px] p-2 font-black text-[20px]">KAWSARSHOP</p>
                 <div className="flex p-2 items-center justify-between">
                     <p className="text-[17px] font-semibold">Shop By Categories</p>
-                    <FontAwesomeIcon icon={faXmark} className="cursor-pointer" onClick={()=> setsidebarcl(false)}/>
+                    <FontAwesomeIcon icon={faXmark} className="cursor-pointer" onClick={()=> {setsidebarcl(false); setsideDropdown(null)}}/>
                 </div>
 
 
@@ -671,7 +695,7 @@ Jewellery
 
 
 <button className="cursor-pointer hover:bg-black  bg-red-700 text-white p-2 rounded-lg">
-    <Link href={``}>Login</Link>
+    <Link href={`/login`}>Login</Link>
 </button>
 
 

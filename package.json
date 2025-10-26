@@ -26,6 +26,7 @@
     "fslightbox-react": "^2.0.0",
     "keen-slider": "^6.8.6",
     "leaflet": "^1.9.4",
+    "lucide-react": "^0.548.0",
     "motion": "^12.23.24",
     "next": "15.5.5",
     "react": "19.1.0",
