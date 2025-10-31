@@ -1,15 +1,13 @@
 "use client"
 
-
-
-import img1 from '../../assets/images/1741660988059_ele.png'
-import img2 from '../../assets/images/1741661045887_bag.png'
-import img3 from '../../assets/images/1741661061379_foot.png'
-import img4 from '../../assets/images/1741661077633_gro.png'
-import img5 from '../../assets/images/1749273446706_jw.png'
-import img6 from '../../assets/images/1755610847575_file_1734525204708_fash.png'
-import img7 from '../../assets/images/1759725032658_file_1734525255799_beauty.png'
-import img8 from '../../assets/images/1741661105893_well.png'
+import img1 from '../../../assets/images/1741660988059_ele.png'
+import img2 from '../../../assets/images/1741661045887_bag.png'
+import img3 from '../../../assets/images/1741661061379_foot.png'
+import img4 from '../../../assets/images/1741661077633_gro.png'
+import img5 from '../../../assets/images/1749273446706_jw.png'
+import img6 from '../../../assets/images/1755610847575_file_1734525204708_fash.png'
+import img7 from '../../../assets/images/1759725032658_file_1734525255799_beauty.png'
+import img8 from '../../../assets/images/1741661105893_well.png'
 
 
 import { useKeenSlider } from "keen-slider/react"

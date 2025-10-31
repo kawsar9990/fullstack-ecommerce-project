@@ -1,9 +1,9 @@
 "use client"
 
-import img1 from '../../assets/images/1759938778050_30745.jpg'
-import img2 from '../../assets/images/1759938751802_30744.jpg'
-import img3 from '../../assets/images/1751685130717_NewProject(8).jpg'
-import img4 from '../../assets/images/1748955932914_NewProject(1).jpg'
+import img1 from '../../../assets/images/1759938778050_30745.jpg'
+import img2 from '../../../assets/images/1759938751802_30744.jpg'
+import img3 from '../../../assets/images/1751685130717_NewProject(8).jpg'
+import img4 from '../../../assets/images/1748955932914_NewProject(1).jpg'
 
 
 import { useKeenSlider } from "keen-slider/react"

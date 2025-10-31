@@ -162,7 +162,7 @@ export default function Footer(){
     <h1 className="font-semibold text-[20px]">Products</h1>
     <Link href={``} className="text-gray-500 hover:text-red-500">New Products</Link>
     <Link href={``} className="text-gray-500 hover:text-red-500">Delivery</Link>
-    <Link href={``} className="text-gray-500 hover:text-red-500">Contact us</Link>
+    <Link href={`/contact`} className="text-gray-500 hover:text-red-500">Contact us</Link>
     <Link href={`/noticepage`} className="text-gray-500 hover:text-red-500">Legal Notice</Link>
     <Link href={`/termspage`} className="text-gray-500 hover:text-red-500">Terms & Condition</Link>
     <Link href={``} className="text-gray-500 hover:text-red-500">Checkout</Link>

@@ -16,23 +16,59 @@ const heroImg = "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?au
 
 
 const reviews = [
-  { name: 'Elon Musk', designation: 'CEO Tesla', img: img1.src, text: 'Amazing products! The laptop I bought is top-notch.' },
-  { name: 'Mark Zuckerberg', designation: 'CEO Meta', img: img2.src, text: 'Great shopping experience, smooth checkout and fast delivery.' },
-  { name: 'Steve Jobs', designation: 'Founder Apple', img: img3.src, text: 'Quality products, premium experience.' },
-  { name: 'Bill Gates', designation: 'Founder Amazon', img: img4.src, text: 'Excellent support and product range.' }
+  { 
+    name: 'Elon Musk', 
+    designation: 'CEO, Tesla', 
+    img: img1.src, 
+    text: 'KawsarShop delivers innovation with every purchase. My new laptop arrived fast and performs flawlessly — truly impressive service!'
+  },
+  { 
+    name: 'Mark Zuckerberg', 
+    designation: 'CEO, Meta', 
+    img: img2.src, 
+    text: 'The KawsarShop experience was seamless from browsing to checkout. Delivery was quick, and the packaging was excellent.'
+  },
+  { 
+    name: 'Steve Jobs', 
+    designation: 'Founder, Apple', 
+    img: img3.src, 
+    text: 'KawsarShop stands out for its premium quality and attention to detail. Every product feels carefully curated.'
+  },
+  { 
+    name: 'Bill Gates', 
+    designation: 'Founder, Microsoft', 
+    img: img4.src, 
+    text: 'I’m impressed by KawsarShop’s customer service and wide range of authentic products. A reliable destination for online shopping.'
+  }
 ];
-
 
 
 const faqItems = [
-  { q: "How can I order products online?", a: "Simply add the product to your cart and proceed to checkout using our secure payment gateway." },
-  { q: "Where can I track my order?", a: "Go to your account dashboard and click on 'Orders' to track the delivery status." },
-  { q: "Can I return a product?", a: "Yes, we offer 30 days return policy for eligible products." },
-  { q: "Are all products genuine?", a: "Absolutely! We source products from verified manufacturers only." },
-  { q: "Do you offer discounts?", a: "Yes, subscribe to our newsletter for exclusive deals and offers." },
-  { q: "How can I contact support?", a: "You can reach out via our Contact page or live chat support." }
+  { 
+    q: "How can I order products online?", 
+    a: "Shopping at KawsarShop is easy! Just add your favorite items to the cart and complete your purchase through our secure checkout system."
+  },
+  { 
+    q: "Where can I track my order?", 
+    a: "You can track your order anytime from your KawsarShop account dashboard. Simply go to 'My Orders' to view real-time delivery updates."
+  },
+  { 
+    q: "Can I return a product?", 
+    a: "Yes! KawsarShop offers a 30-day return policy on eligible products. If you’re not fully satisfied, you can easily request a return or exchange."
+  },
+  { 
+    q: "Are all products genuine?", 
+    a: "Absolutely! Every product on KawsarShop comes directly from verified and trusted manufacturers — authenticity is guaranteed."
+  },
+  { 
+    q: "Do you offer discounts?", 
+    a: "Yes, we love rewarding our customers! Subscribe to the KawsarShop newsletter or follow us on social media to get the latest deals and exclusive offers."
+  },
+  { 
+    q: "How can I contact support?", 
+    a: "Our customer support team is always here to help. Visit the KawsarShop Contact page or start a live chat for quick assistance."
+  }
 ];
-
 
 
 export default function FaqPage(){
@@ -140,7 +176,7 @@ export default function FaqPage(){
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 200 }}
-                className="bg-gray-800 p-6 rounded-xl h-70 cursor-pointer shadow-lg flex flex-col items-center"
+                className="bg-gray-800 p-6 rounded-xl h-80 cursor-pointer shadow-lg flex flex-col items-center"
               >
                 <img
                   src={r.img}
