@@ -1,61 +1,10 @@
-web name = KawsarShop
-
-
-
-1️⃣ utils/
-কাজ: project এ ছোট helper function রাখবে, যেগুলো বারবার ব্যবহার করা যাবে।
-E-commerce উদাহরণ:
-Currency formatting (price $ → ৳)
-Discount calculation
-Cart item total calculation
-Product slug generate করা
+api injection + admin dashboard api injection
+all web feture add
+proudct api injection
+firbase and rest api
+login page Authentication add
+mongodb add
 
 
 
 
-2️⃣ constants/
-কাজ: fixed values/setting রাখবে।
-E-commerce উদাহরণ:
-API base URL
-Product categories
-Payment methods
-Shipping charges
-
-
-
-
-3️⃣ lib/
-কাজ: reusable functions বা frontend helper functions যা বিভিন্ন service/logic এ use হবে।
-E-commerce উদাহরণ:
-Fetcher function (API থেকে data fetch করা)
-Car localStorage handle
-Authentication helper
-
-
-
-4️⃣ services/
-কাজ: সব backend API call এক জায়গায় রাখবে।
-E-commerce উদাহরণ:
-ProductService → getProducts, getProductById
-UserService → loginUser, registerUser
-OrderService → createOrder, getOrders
-
-
-
-5️⃣ hooks/
-কাজ: custom React hooks, reusable logic component এ use করার জন্য।
-E-commerce উদাহরণ:
-useAuth → login state track করা
-useCart → cart items manage করা
-useFetch → API থেকে data fetch করা
-
-
-
-
-6️⃣ types/
-কাজ: TypeScript type/interface define করা।
-E-commerce উদাহরণ:
-Product type
-User type
-Order type
-API Response type..

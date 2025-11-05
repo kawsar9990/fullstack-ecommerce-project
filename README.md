@@ -38,4 +38,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 
 This is Front end 🚀
-👉 **Live Demo:** [Click Here](https://kawsar-ecommerce-web.netlify.app/)
+👉 **Live Demo:** [Click Here](https://kawsar-fullstack-ecommerce.netlify.app/)
