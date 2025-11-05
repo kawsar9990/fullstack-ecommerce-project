@@ -1,0 +1,425 @@
+api injection + admin dashboard api injection..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'use client';
+
+import { useState, useMemo, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  FileText,
+  Search as SearchIcon,
+  Download,
+  Copy,
+  Printer,
+  Mail,
+  ChevronDown,
+  ChevronUp,
+  Clock,
+  Tag,
+  ListChecks,
+  Slash,
+} from 'lucide-react';
+
+/**
+ * Advanced Legal Notices Page
+ * - bg-white, text-gray-900 friendly
+ * - Notices list with accordion + meta
+ * - Search, filter, expand/collapse all
+ * - Per-notice actions: Print, Copy, Download, Email
+ *
+ * NOTE: Replace or extend `NOTICES` content with your real legal text.
+ */
+
+const NOTICES = [
+  {
+    id: 'terms-of-service',
+    title: 'Terms of Service',
+    severity: 'Legal',
+    version: 'v2.3',
+    updated: '2025-09-10',
+    summary:
+      'Rules and responsibilities for using our marketplace, including account obligations and prohibited actions.',
+    content: `1. Introduction\n\nWelcome to ExampleShop. By using our services you agree to these Terms of Service (TOS).\n\n2. Account & Use\n\nYou must provide accurate information, secure your account credentials, and are responsible for all account activity.\n\n3. Prohibited Activities\n\nDo not abuse the platform: uploading illegal content, circumventing payment, or impersonating others is strictly forbidden.\n\n4. Liability\n\nOur liability is limited in accordance with the terms described herein. For full terms, consult the full legal document.`,
+  },
+  {
+    id: 'privacy-policy',
+    title: 'Privacy Policy',
+    severity: 'Important',
+    version: 'v1.8',
+    updated: '2025-06-01',
+    summary:
+      'How we collect, use and store personal data; cookies; third-party services; user rights (access/delete).',
+    content: `1. Data We Collect\n\nWe collect contact details, purchase history, device information and optionally profile photos.\n\n2. Use of Data\n\nData is used to process orders, improve service and for personalization. We never sell your personal data.\n\n3. Cookies\n\nWe use essential cookies for cart and optional analytics cookies. Manage preferences under Account > Privacy.\n\n4. Your Rights\n\nYou have rights to access, correct, delete, and port your data. Contact data@exampleshop.com for requests.`,
+  },
+  {
+    id: 'refund-and-returns',
+    title: 'Refund & Returns Policy',
+    severity: 'Info',
+    version: 'v1.2',
+    updated: '2025-10-01',
+    summary:
+      'Rules for returns, eligible items, processing timeframes, and how refunds are issued (store credit/bank).',
+    content: `1. Eligibility\n\nMost items are refundable within 30 days if returned in original condition. Some categories (digital goods, clearance) are final sale.\n\n2. Process\n\nInitiate a return from Orders > Return; ship with provided label. Once received, refund will be issued within 3-7 business days.\n\n3. Refund Method\n\nRefunds follow the original payment method unless otherwise agreed (store credit may be offered).`,
+  },
+  {
+    id: 'dmca-policy',
+    title: 'Copyright & DMCA Notice',
+    severity: 'Legal',
+    version: 'v1.0',
+    updated: '2024-11-30',
+    summary:
+      'Procedure for reporting copyright infringement and counter-notifications under DMCA.',
+    content: `To report copyright infringement, send a written notice to our designated agent including: (i) identification of the work; (ii) location of infringing material; (iii) your contact information; (iv) a statement under penalty of perjury that you are authorized to act.\n\nCounter-notifications must include required statements and your signature. We process DMCA notices in accordance with applicable law.`,
+  },
+  {
+    id: 'cookies-and-tracking',
+    title: 'Cookies & Tracking',
+    severity: 'Info',
+    version: 'v1.1',
+    updated: '2025-02-20',
+    summary: 'Types of cookies we use, retention, and how users can manage cookie preferences.',
+    content: `We use essential cookies for cart/session; analytics cookies for site improvement; advertising cookies for relevant offers. Users can opt out via cookie settings or browser controls.`,
+  },
+];
+
+export default function LegalNoticesPage() {
+  const [query, setQuery] = useState('');
+  const [openIds, setOpenIds] = useState(() => new Set()); // track expanded notices
+  const [filterSeverity, setFilterSeverity] = useState('All'); // All | Info | Important | Legal
+  const containerRef = useRef(null);
+
+  // filter & search
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return NOTICES.filter((n) => {
+      if (filterSeverity !== 'All' && n.severity !== filterSeverity) return false;
+      if (!q) return true;
+      // search in title, summary, content
+      return (
+        n.title.toLowerCase().includes(q) ||
+        n.summary.toLowerCase().includes(q) ||
+        n.content.toLowerCase().includes(q)
+      );
+    });
+  }, [query, filterSeverity]);
+
+  // helpers
+  const toggleOpen = (id) => {
+    setOpenIds((prev) => {
+      const copy = new Set(Array.from(prev));
+      if (copy.has(id)) copy.delete(id);
+      else copy.add(id);
+      return copy;
+    });
+  };
+
+  const expandAll = () => {
+    setOpenIds(new Set(filtered.map((n) => n.id)));
+  };
+
+  const collapseAll = () => {
+    setOpenIds(new Set());
+  };
+
+  const printNotice = (notice) => {
+    // open a new window and print simplified content
+    const w = window.open('', '_blank', 'noopener,noreferrer');
+    if (!w) return;
+    const html = `
+      <html>
+        <head>
+          <title>${notice.title} - Legal Notice</title>
+          <style>
+            body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; padding:24px; color:#111}
+            h1{font-size:20px}
+            pre{white-space:pre-wrap}
+            .meta{color:#555;font-size:13px;margin-bottom:12px}
+          </style>
+        </head>
+        <body>
+          <h1>${notice.title}</h1>
+          <div class="meta">Version: ${notice.version} • Last updated: ${notice.updated}</div>
+          <pre>${escapeHtml(notice.content)}</pre>
+        </body>
+      </html>
+    `;
+    w.document.write(html);
+    w.document.close();
+    w.focus();
+    setTimeout(() => w.print(), 300);
+  };
+
+  const copyNotice = async (notice) => {
+    try {
+      await navigator.clipboard.writeText(`${notice.title}\n\n${notice.content}`);
+      alert('Notice copied to clipboard');
+    } catch {
+      alert('Unable to copy (clipboard access denied).');
+    }
+  };
+
+  const downloadNotice = (notice) => {
+    const blob = new Blob([`${notice.title}\n\n${notice.content}`], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${notice.id || notice.title}.txt`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  };
+
+  const emailNotice = (notice) => {
+    const subject = encodeURIComponent(`Request about: ${notice.title}`);
+    const body = encodeURIComponent(`Hi support,\n\nI have a question about "${notice.title}".\n\nRegards,\n\n(Your name)`);
+    window.location.href = `mailto:support@example.com?subject=${subject}&body=${body}`;
+  };
+
+  // small util to escape html in print window
+  function escapeHtml(str = '') {
+    return str
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;');
+  }
+
+  return (
+    <div className="min-h-screen bg-white text-gray-900 py-16 px-6">
+      <main className="max-w-6xl mx-auto">
+        {/* Header */}
+        <header className="mb-8">
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <h1 className="text-3xl md:text-4xl font-extrabold">Legal Notices & Policies</h1>
+              <p className="mt-2 text-gray-600 max-w-2xl">
+                Centralized legal resource for our e-commerce platform — Terms, Privacy, Returns, DMCA and more.
+                Browse, search, print or download any policy.
+              </p>
+              <div className="flex items-center gap-3 mt-3 text-sm text-gray-600">
+                <Clock className="w-4 h-4" />
+                <span>Master document last updated: <strong className="text-gray-800">Oct 10, 2025</strong></span>
+                <span className="ml-4 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-gray-100 text-xs text-gray-700 border border-gray-200">
+                  <Tag className="w-3 h-3" /> Version: <strong className="ml-1">3.0</strong>
+                </span>
+              </div>
+            </div>
+
+            {/* Quick actions */}
+            <div className="hidden md:flex flex-col items-end gap-2">
+              <div className="flex gap-2">
+                <button
+                  onClick={expandAll}
+                  className="inline-flex items-center gap-2 px-3 py-2 rounded bg-amber-500 text-white text-sm hover:bg-amber-600 transition"
+                >
+                  <ListChecks className="w-4 h-4" /> Expand all
+                </button>
+                <button
+                  onClick={collapseAll}
+                  className="inline-flex items-center gap-2 px-3 py-2 rounded border border-gray-200 text-sm hover:bg-gray-50 transition"
+                >
+                  <Slash className="w-4 h-4" /> Collapse all
+                </button>
+              </div>
+              <div className="mt-1 text-sm text-gray-500">Filter by severity:</div>
+              <div className="flex gap-2 mt-1">
+                {['All', 'Info', 'Important', 'Legal'].map((s) => (
+                  <button
+                    key={s}
+                    onClick={() => setFilterSeverity(s)}
+                    className={`px-3 py-1 rounded text-sm ${filterSeverity === s ? 'bg-amber-500 text-white' : 'bg-gray-50 text-gray-700 border border-gray-200'}`}
+                    aria-pressed={filterSeverity === s}
+                  >
+                    {s}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </header>
+
+        {/* Search & TOC */}
+        <section className="mb-8 grid md:grid-cols-3 gap-4 items-start">
+          <div className="md:col-span-2">
+            <label htmlFor="search" className="sr-only">Search notices</label>
+            <div className="relative">
+              <SearchIcon className="absolute left-3 top-3 text-gray-400 w-5 h-5" />
+              <input
+                id="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Search legal notices, e.g. 'refund', 'DMCA', 'cookies'..."
+                className="w-full pl-11 pr-4 py-3 rounded-lg border border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                aria-label="Search legal notices"
+              />
+            </div>
+            <p className="text-xs text-gray-500 mt-2">Search scans titles, summaries and full notice content.</p>
+          </div>
+
+          {/* TOC */}
+          <aside className="md:col-span-1 bg-gray-50 border border-gray-100 rounded-lg p-3">
+            <h3 className="text-sm font-semibold text-gray-800 mb-2">Table of Contents</h3>
+            <nav aria-label="Table of Contents" className="space-y-2">
+              {filtered.map((n) => (
+                <a
+                  key={n.id}
+                  href={`#${n.id}`}
+                  className="block text-sm text-amber-600 hover:underline"
+                >
+                  {n.title}
+                </a>
+              ))}
+              {filtered.length === 0 && <div className="text-xs text-gray-500">No matches</div>}
+            </nav>
+          </aside>
+        </section>
+
+        {/* Notices list */}
+        <section ref={containerRef} aria-live="polite" className="space-y-4">
+          {filtered.length === 0 && (
+            <div className="bg-yellow-50 border border-yellow-100 p-4 rounded">
+              <strong className="text-sm text-yellow-800">No results</strong>
+              <div className="text-xs text-yellow-700 mt-1">Try different keywords or clear filters.</div>
+            </div>
+          )}
+
+          {filtered.map((notice) => {
+            const isOpen = openIds.has(notice.id);
+            return (
+              <article
+                id={notice.id}
+                key={notice.id}
+                className="border border-gray-100 rounded-lg bg-white shadow-sm"
+              >
+                <header className="flex items-center justify-between gap-4 p-4">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3">
+                      <h4 className="text-lg font-semibold text-gray-900">{notice.title}</h4>
+                      <span className={`text-xs px-2 py-0.5 rounded-full ${notice.severity === 'Legal' ? 'bg-red-100 text-red-700' : notice.severity === 'Important' ? 'bg-amber-100 text-amber-700' : 'bg-blue-50 text-blue-700'}`}>
+                        {notice.severity}
+                      </span>
+                    </div>
+                    <p className="text-sm text-gray-600 mt-1">{notice.summary}</p>
+                    <div className="mt-2 text-xs text-gray-500 flex items-center gap-3">
+                      <span>Version: <strong className="text-gray-700">{notice.version}</strong></span>
+                      <span>•</span>
+                      <span>Last updated: <strong className="text-gray-700">{notice.updated}</strong></span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    {/* actions */}
+                    <button onClick={() => printNotice(notice)} title="Print" className="p-2 rounded hover:bg-gray-50">
+                      <Printer className="w-4 h-4 text-gray-600" />
+                    </button>
+                    <button onClick={() => copyNotice(notice)} title="Copy" className="p-2 rounded hover:bg-gray-50">
+                      <Copy className="w-4 h-4 text-gray-600" />
+                    </button>
+                    <button onClick={() => downloadNotice(notice)} title="Download" className="p-2 rounded hover:bg-gray-50">
+                      <Download className="w-4 h-4 text-gray-600" />
+                    </button>
+                    <button onClick={() => emailNotice(notice)} title="Email" className="p-2 rounded hover:bg-gray-50">
+                      <Mail className="w-4 h-4 text-gray-600" />
+                    </button>
+
+                    {/* expand/collapse */}
+                    <button
+                      onClick={() => toggleOpen(notice.id)}
+                      aria-expanded={isOpen}
+                      aria-controls={`${notice.id}-content`}
+                      className="ml-2 flex items-center gap-1 px-3 py-2 rounded border border-gray-100 bg-gray-50 hover:bg-gray-100"
+                    >
+                      {isOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                      <span className="text-sm text-gray-700">{isOpen ? 'Collapse' : 'Open'}</span>
+                    </button>
+                  </div>
+                </header>
+
+                {/* Animated content */}
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      id={`${notice.id}-content`}
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.25 }}
+                      className="px-4 pb-4 pt-0"
+                    >
+                      <div className="prose prose-sm max-w-none text-gray-800">
+                        {/* Using <pre> to keep line breaks for this example. Replace with markup as needed */}
+                        <pre className="whitespace-pre-wrap">{notice.content}</pre>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </article>
+            );
+          })}
+        </section>
+
+        {/* Footer quick download / entire bundle */}
+        <footer className="mt-8 border-t pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div>
+            <p className="text-sm text-gray-700">Need the full legal bundle?</p>
+            <p className="text-xs text-gray-500 mt-1">Download all notices as a single text file for internal review or legal team.</p>
+          </div>
+
+          <div className="flex gap-2">
+            <button
+              onClick={() => {
+                // create full bundle
+                const blob = new Blob([NOTICES.map(n => `${n.title}\n\n${n.content}\n\n---\n\n`).join('')], { type: 'text/plain;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `legal-notices-bundle.txt`;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                URL.revokeObjectURL(url);
+              }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded bg-amber-500 text-white hover:bg-amber-600 transition text-sm"
+            >
+              <Download className="w-4 h-4" /> Download bundle
+            </button>
+
+            <button onClick={() => window.print()} className="inline-flex items-center gap-2 px-4 py-2 rounded border border-gray-200 text-sm hover:bg-gray-50 transition">
+              <Printer className="w-4 h-4" /> Print page
+            </button>
+          </div>
+        </footer>
+      </main>
+    </div>
+  );
+}
