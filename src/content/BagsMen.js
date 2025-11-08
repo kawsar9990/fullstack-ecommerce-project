@@ -31,7 +31,7 @@ import img37 from '../assets/item/7dd7c496-a11b-4dac-936b-7ca4e1460d63.jpg';
 
 
 
-export const Jewellery = [
+export const BagMen = [
    {
     id: 1,
     image: img1,
@@ -100,7 +100,7 @@ export const Jewellery = [
   {
     id: 6,
     image: img6,
-    name: " Outdoor Backpack",
+    name: "Outdoor Backpack",
     categoryImg: [img6, img32, img33],
     category: "Backpack",
     title: "Durable polyester, perfect for hiking or school",
@@ -113,7 +113,7 @@ export const Jewellery = [
   {
     id: 7,
     image: img7,
-    name: " Leather Belt Bag",
+    name: "Leather Belt Bag",
     categoryImg: [img7, img34, img35],
     category: "Belt Bag",
     title: "Elegant leather design with adjustable belt",
@@ -126,7 +126,7 @@ export const Jewellery = [
   {
     id: 8,
     image: img8,
-    name: " Classic Briefcase",
+    name: "Classic Briefcase",
     categoryImg: [img8, img36, img37],
     category: "Briefcase",
     title: "Professional leather briefcase with laptop compartment",
@@ -139,7 +139,7 @@ export const Jewellery = [
   {
     id: 9,
     image: img9,
-    name: " Sports Gym Bag",
+    name: "Sports Gym Bag",
     categoryImg: [img9, img30, img31],
     category: "Gym Bag",
     title: "Durable and spacious, perfect for sports equipment",
@@ -152,7 +152,7 @@ export const Jewellery = [
   {
     id: 10,
     image: img10,
-    name: " Weekend Travel Backpack",
+    name: "Weekend Travel Backpack",
     categoryImg: [img10, img32, img33],
     category: "Backpack",
     title: "Comfortable straps and multiple compartments",

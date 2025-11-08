@@ -156,7 +156,6 @@ export default function Header(){
  {sideDropdown === "fashion" && (
           <div className="flex flex-col pl-5 pt-2">
             <Link href={``} className="p-2 hover:bg-blue-50 hover:rounded-lg transition-all duration-300">Women</Link>
-            <Link href={``} className="p-2 hover:bg-blue-50 hover:rounded-lg transition-all duration-300">Girls</Link>
             <Link href={``} className="p-2 hover:bg-blue-50 hover:rounded-lg transition-all duration-300">Men</Link>
           </div>
         )}
@@ -360,7 +359,6 @@ export default function Header(){
     group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
     transition-all duration-300 ease-out z-50">
         <Link href={``} className=" hover:text-red-500 cursor-pointer">Women</Link>
-        <Link href={``} className=" hover:text-red-500 cursor-pointer">Girls</Link>
         <Link href={``} className=" hover:text-red-500 cursor-pointer">Men</Link>
     </ul>
 
@@ -533,7 +531,6 @@ Jewellery
  {sideDropdown === "fashion" && (
           <div className="flex flex-col pl-5 pt-2">
             <Link href={``} className="p-2 hover:bg-blue-50 hover:rounded-lg transition-all duration-300">Women</Link>
-            <Link href={``} className="p-2 hover:bg-blue-50 hover:rounded-lg transition-all duration-300">Girls</Link>
             <Link href={``} className="p-2 hover:bg-blue-50 hover:rounded-lg transition-all duration-300">Men</Link>
           </div>
         )}
