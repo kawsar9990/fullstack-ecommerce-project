@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <link rel="shortcut icon" href="/icon.png" type="image/x-icon" />
  
 
-      <body className={`antialiased`}>
+      <body>
         
         <Header />
 

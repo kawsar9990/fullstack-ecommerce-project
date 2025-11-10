@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import gif from '../assets/loadingEffect/loading-3692.gif'
+import gif from '../assets/loadingEffect/infinity-16570.gif'
 
 
 export default function Loading(){
