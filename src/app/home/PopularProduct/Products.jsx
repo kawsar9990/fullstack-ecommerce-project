@@ -6,15 +6,20 @@ import { useCategory } from "../../../context/CategoryContext.js";
 
 import { RingLoader } from "react-spinners";
 
+import Image from "next/image";
 
-import { Fashion } from "../../../content/allFashion.js";
-import { Electronics } from "../../../content/allelectronics.js";
-import { Bag } from "../../../content/allbags.js";
-import { Footwear } from "../../../content/allFootwear.js";
-import { Groceries } from "../../../content/allGroceries.js";
-import { Beauty } from "../../../content/allbeauty.js";
-import { Wellness } from "../../../content/allWellness.js";
-import { Jewellery } from "../../../content/allJewellery.js";
+import fallbackImg from '../../../assets/svg/thimnail.jpg'
+
+
+import { Fashion } from "../../../content/PopularCat/Fashion.js";
+import { Electronics } from "../../../content/PopularCat/Electronics.js";
+import { Bag } from "../../../content/PopularCat/Bags.js";
+import { Footwear } from "../../../content/PopularCat/Footwear.js";
+import { Beauty } from "../../../content/PopularCat/Beauty.js";
+import { Groceries } from "../../../content/PopularCat/Groceries.js";
+import { Wellness } from "../../../content/PopularCat/Welness.js";
+import { Jewellery } from "../../../content/PopularCat/Jewellery.js";
+
 
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -83,23 +88,35 @@ export default function ItemConnect(){
 
 
  <div ref={sliderRef} className="keen-slider">
-{categoriesData[activeTab].map((item)=> (
+{categoriesData[activeTab].map(item => (
  <div
   key={item.id}
   className="keen-slider__slide group mb-5 rounded-lg cursor-pointer shadow-lg flex flex-col justify-between"
 >
   <div>
     <div className="overflow-hidden relative">
-      <img
-        src={item.image.src}
-        alt=""
-        className="transition-all duration-500 group-hover:scale-110 w-full h-50 object-cover rounded"
-      />
+      <Image
+  src={item.image || fallbackImg}
+  alt={item.name}
+  width={300}
+  height={200}
+  onError={(e)=> (e.currentTarget.src = fallbackImg.src)}
+  className="w-full h-[180px] object-cover rounded transition-all duration-500 group-hover:scale-110"
+/>
       <div className="absolute text-white top-1 left-1 rounded-lg font-bold p-1 bg-red-600">
         {item.discountPercent}
       </div>
     </div>
 
+    {loading ? (
+  <div className="animate-pulse">
+    <div className="h-[180px] bg-gray-200 rounded"></div>
+    <div className="h-3 bg-gray-200 mt-2 rounded"></div>
+    <div className="h-3 bg-gray-200 mt-1 rounded w-1/2"></div>
+  </div>
+    )
+  :
+  (
     <div className="p-2 flex flex-col gap-1 flex-grow">
       <div className="text-gray-400 text-[10px]">{item.category}</div>
       <div className="text-black text-[12px] line-clamp-2 h-[32px]">
@@ -111,10 +128,11 @@ export default function ItemConnect(){
         <code className="text-red-600 font-semibold">{item.price}</code>
       </div>
     </div>
+  )}
   </div>
 
   <div className="p-2 mb-2">
-    <button className="bg-transparent outline-2 text-center rounded-md text-red-500 cursor-pointer outline-red-600 p-2 w-full">
+    <button onClick={()=> handleLoading(item.id)} className="bg-transparent outline-2 text-center rounded-md text-red-500 cursor-pointer outline-red-600 p-2 w-full">
       <Link href={``} className="flex flex-row gap-3 justify-center">
         <code>
           <FontAwesomeIcon icon={faCartShopping} />

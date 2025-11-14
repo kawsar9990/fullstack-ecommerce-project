@@ -18,11 +18,11 @@ import img15 from '../assets/item/latitude-3430-01-228x228.webp';
 
 // categoryImg
 import img30 from '../assets/item/macbook-pro-16-m4-pro-space-black-01-228x228.webp';
-import img31 from '../assets/item/HP 15-fd1191TU Intel Core 5 120U 15.6, FHD Laptop';
+import img31 from '../assets/item/chuwi_herobook_pro_intel_celeron_n4020_14.1_inch_full_hd_laptop_with_windows_11_3.jpg';
 import img32 from '../assets/item/v15-gen-4-01-228x228.webp';
 import img33 from '../assets/item/ideapad-slim-3-15iru10-01-228x228.webp';
 import img34 from '../assets/item/expertbook-b1-b1403cva-01-228x228.webp';
-import img35 from '../assets/item/';
+import img35 from '../assets/item/lenovo-laptop-g4045-amd-a8-6410-quad-core-black.jpg';
 import img36 from '../assets/item/aspire-5-a515-58gm-57gf-01-228x228.webp';
 import img37 from '../assets/item/nitro-v-15-01-228x228.webp';
 
