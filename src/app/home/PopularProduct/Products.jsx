@@ -132,7 +132,7 @@ export default function ItemConnect(){
   </div>
 
   <div className="p-2 mb-2">
-    <button onClick={()=> handleLoading(item.id)} className="bg-transparent outline-2 text-center rounded-md text-red-500 cursor-pointer outline-red-600 p-2 w-full">
+    <button onClick={()=> handleLoading(item.id)} className="bg-transparent outline-2 text-center rounded-md text-red-500 cursor-pointer outline-red-600  p-1 w-full">
       <Link href={``} className="flex flex-row gap-3 justify-center">
         <code>
           <FontAwesomeIcon icon={faCartShopping} />

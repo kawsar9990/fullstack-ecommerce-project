@@ -8,6 +8,8 @@ import Loading from "../hooks/useLoading";
 import FirstSlider from "./home/Home/firstslide";
 import FirstSliderBox from "./home/Home/firstbox";
 import HomePopularProduct from "./home/PopularProduct/page";
+import Page from "./home/MainSlider/page";
+import LatestPage from "./home/LatestProduct/page";
 
 import Blog from "./home/Blog/page";
 
@@ -24,6 +26,8 @@ export default function Home() {
       <FirstSlider />
       <FirstSliderBox />
       <HomePopularProduct />
+      <Page />
+      <LatestPage />
 
 
 
