@@ -1,44 +1,44 @@
-import img1 from '../assets/item/9.jpg';
-import img2 from '../assets/item/a12.png';
-import img3 from '../assets/item/a1ed5d0d-f847-4401-b6aa-069ba8736e3e.jpg';
-import img4 from '../assets/item/8066554_2_300x.webp';
-import img5 from '../assets/item/yGUtE23605.jpg';
-import img6 from '../assets/item/IIQqq10111.jpg';
-import img7 from '../assets/item/VwbWi17202.jpg';
-import img8 from '../assets/item/WxDWm26304.jpg';
-import img9 from '../assets/item/VYJKI09602.jpg';
-import img10 from '../assets/item/Ijkt515312.jpg';
-import img11 from '../assets/item/a13.png';
-import img12 from '../assets/item/8Pwek10410.jpg';
-import img13 from '../assets/item/c3f20fb0-fa2d-4e8c-a24a-ca858eaf42fa.jpg';
-import img14 from '../assets/item/eb4ce00a-4c28-40e3-bda4-fc16178c27d3.jpg';
-import img15 from '../assets/item/c627b561-8f9e-4973-b249-5a50e9864c29.jpg';
-import img16 from '../assets/item/d0f1cd04-9251-4068-9439-b776a0ff5b44.jpg';
-import img17 from '../assets/item/80915498-dc7b-48cb-80a8-e7ae1c31d4e5.jpg';
-import img18 from '../assets/item/369f7c9b-1133-4218-8770-8facd0b7c42f.jpg';
-import img19 from '../assets/item/5cbce7e7-0bf4-4ff1-b76c-b42cf99a8182.jpg';
-import img20 from '../assets/item/94de6e35-88d9-4657-a198-95c5905faec1.jpg';
+import img1 from '../../assets/item/9.jpg';
+import img2 from '../../assets/item/a12.png';
+import img3 from '../../assets/item/a1ed5d0d-f847-4401-b6aa-069ba8736e3e.jpg';
+import img4 from '../../assets/item/8066554_2_300x.webp';
+import img5 from '../../assets/item/yGUtE23605.jpg';
+import img6 from '../../assets/item/IIQqq10111.jpg';
+import img7 from '../../assets/item/VwbWi17202.jpg';
+import img8 from '../../assets/item/WxDWm26304.jpg';
+import img9 from '../../assets/item/VYJKI09602.jpg';
+import img10 from '../../assets/item/Ijkt515312.jpg';
+import img11 from '../../assets/item/a13.png';
+import img12 from '../../assets/item/8Pwek10410.jpg';
+import img13 from '../../assets/item/c3f20fb0-fa2d-4e8c-a24a-ca858eaf42fa.jpg';
+import img14 from '../../assets/item/eb4ce00a-4c28-40e3-bda4-fc16178c27d3.jpg';
+import img15 from '../../assets/item/c627b561-8f9e-4973-b249-5a50e9864c29.jpg';
+import img16 from '../../assets/item/d0f1cd04-9251-4068-9439-b776a0ff5b44.jpg';
+import img17 from '../../assets/item/80915498-dc7b-48cb-80a8-e7ae1c31d4e5.jpg';
+import img18 from '../../assets/item/369f7c9b-1133-4218-8770-8facd0b7c42f.jpg';
+import img19 from '../../assets/item/5cbce7e7-0bf4-4ff1-b76c-b42cf99a8182.jpg';
+import img20 from '../../assets/item/94de6e35-88d9-4657-a198-95c5905faec1.jpg';
 
 
 
 
 // categoryImg
-import img30 from '../assets/item/WRrOkWDGL1r4u9WDAbZ3TyjfB64n4qtT8Rifn31f.jpg';
-import img31 from '../assets/item/vuzhjgs9LNY95flx79K6QXdqC81EFyz66OVPHYB6 (1).jpg';
-import img32 from '../assets/item/men-formal-2.jpg';
-import img33 from '../assets/item/men-formal-1.jpg';
-import img34 from '../assets/item/3dtbF04803.jpg';
-import img35 from '../assets/item/UXCzH09211.jpg';
-import img36 from '../assets/item/WyLMU02812.jpg';
-import img37 from '../assets/item/mYWqR06703.jpg';
-import img38 from '../assets/item/K7ywY4IbKbiGVTRKs2wsVQSru0Et9vtQfmI4LU90.jpg';
-import img39 from '../assets/item/15b5a336-34c4-4033-93a5-fef038f17e20.jpg';
-import img40 from '../assets/item/9f057343-ca2d-4dd2-8300-9996fd57fe26.jpg';
-import img41 from '../assets/item/cf0f936d-e27c-4dec-905c-4afb68663047.jpg';
-import img42 from '../assets/item/90a9b7db-c3b1-477f-bb90-84ae55db81a4.jpg';
-import img43 from '../assets/item/0b76ff2a-a5e4-4707-a432-9ac3779aa6b6.jpg';
-import img44 from '../assets/item/79c81079-d717-485b-b571-1aff5a6aaaf8.jpg';
-import img45 from '../assets/item/c42dca80-cc3e-4baf-b697-723467f4ce47.jpg';
+import img30 from '../../assets/item/WRrOkWDGL1r4u9WDAbZ3TyjfB64n4qtT8Rifn31f.jpg';
+import img31 from '../../assets/item/vuzhjgs9LNY95flx79K6QXdqC81EFyz66OVPHYB6 (1).jpg';
+import img32 from '../../assets/item/men-formal-2.jpg';
+import img33 from '../../assets/item/men-formal-1.jpg';
+import img34 from '../../assets/item/3dtbF04803.jpg';
+import img35 from '../../assets/item/UXCzH09211.jpg';
+import img36 from '../../assets/item/WyLMU02812.jpg';
+import img37 from '../../assets/item/mYWqR06703.jpg';
+import img38 from '../../assets/item/K7ywY4IbKbiGVTRKs2wsVQSru0Et9vtQfmI4LU90.jpg';
+import img39 from '../../assets/item/15b5a336-34c4-4033-93a5-fef038f17e20.jpg';
+import img40 from '../../assets/item/9f057343-ca2d-4dd2-8300-9996fd57fe26.jpg';
+import img41 from '../../assets/item/cf0f936d-e27c-4dec-905c-4afb68663047.jpg';
+import img42 from '../../assets/item/90a9b7db-c3b1-477f-bb90-84ae55db81a4.jpg';
+import img43 from '../../assets/item/0b76ff2a-a5e4-4707-a432-9ac3779aa6b6.jpg';
+import img44 from '../../assets/item/79c81079-d717-485b-b571-1aff5a6aaaf8.jpg';
+import img45 from '../../assets/item/c42dca80-cc3e-4baf-b697-723467f4ce47.jpg';
 
 
 

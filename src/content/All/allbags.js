@@ -1,44 +1,44 @@
-import img1 from '../assets/item/Resize_Website4_0000__DSC5304.jpg';
-import img2 from '../assets/item/fea739d1-03fb-41d0-829d-bba6819fa7e7.jpg';
-import img3 from '../assets/item/94accc60-90d1-44e5-8794-d54c6cd4591b.jpg';
-import img4 from '../assets/item/Resize_Website4_0003_Layer_2.jpg';
-import img5 from '../assets/item/Shoe_0003_Layer_79.jpg';
-import img6 from '../assets/item/4156a422-422a-49ee-bd11-24d0397e2f74.jpg';
-import img7 from '../assets/item/361070be-11e8-426c-a92a-13735e4a9b15.jpg';
-import img8 from '../assets/item/bc7481fd-22ff-4f8b-b2b4-bde0cef57867.jpg';
-import img9 from '../assets/item/3146d107-90ce-4265-8505-0e9400aa812a.jpg';
-import img10 from '../assets/item/a50cbae0-1371-4a72-bd7f-c44d5c68db5a.jpg';
-import img11 from '../assets/item/15.jpg';
-import img12 from '../assets/item/39.jpg';
-import img13 from '../assets/item/_0001__DSC5788_efy9xvz.jpg';
-import img14 from '../assets/item/guide_0000__DSC5744_sEtdVaH.jpg';
-import img15 from '../assets/item/guide_0000__DSC5614_d4wN3Ho.jpg';
-import img16 from '../assets/item/DSC6963_-_DSC6966_0000__DSC6963.jpg';
-import img17 from '../assets/item/GfriendTan_2_1000x.webp';
-import img18 from '../assets/item/DSC02472_1000x.webp';
-import img19 from '../assets/item/_DSC2004.jpg';
-import img20 from '../assets/item/_DSC9218.jpg';
+import img1 from '../../assets/item/Resize_Website4_0000__DSC5304.jpg';
+import img2 from '../../assets/item/fea739d1-03fb-41d0-829d-bba6819fa7e7.jpg';
+import img3 from '../../assets/item/94accc60-90d1-44e5-8794-d54c6cd4591b.jpg';
+import img4 from '../../assets/item/Resize_Website4_0003_Layer_2.jpg';
+import img5 from '../../assets/item/Shoe_0003_Layer_79.jpg';
+import img6 from '../../assets/item/4156a422-422a-49ee-bd11-24d0397e2f74.jpg';
+import img7 from '../../assets/item/361070be-11e8-426c-a92a-13735e4a9b15.jpg';
+import img8 from '../../assets/item/bc7481fd-22ff-4f8b-b2b4-bde0cef57867.jpg';
+import img9 from '../../assets/item/3146d107-90ce-4265-8505-0e9400aa812a.jpg';
+import img10 from '../../assets/item/a50cbae0-1371-4a72-bd7f-c44d5c68db5a.jpg';
+import img11 from '../../assets/item/15.jpg';
+import img12 from '../../assets/item/39.jpg';
+import img13 from '../../assets/item/_0001__DSC5788_efy9xvz.jpg';
+import img14 from '../../assets/item/guide_0000__DSC5744_sEtdVaH.jpg';
+import img15 from '../../assets/item/guide_0000__DSC5614_d4wN3Ho.jpg';
+import img16 from '../../assets/item/DSC6963_-_DSC6966_0000__DSC6963.jpg';
+import img17 from '../../assets/item/GfriendTan_2_1000x.webp';
+import img18 from '../../assets/item/DSC02472_1000x.webp';
+import img19 from '../../assets/item/_DSC2004.jpg';
+import img20 from '../../assets/item/_DSC9218.jpg';
 
 
 
 
 // categoryImg
-import img30 from '../assets/item/Resize_Website4_0001_Layer_1.jpg';
-import img31 from '../assets/item/Resize_Website4_0000_Layer_5.jpg';
-import img32 from '../assets/item/Resize_Website4_0000__DSC5314.jpg';
-import img33 from '../assets/item/07992722-fffc-49ce-a2e6-7a12fc519f80.jpg';
-import img34 from '../assets/item/7a2b5053-afc7-430a-9efc-c0cebff6c483.jpg';
-import img35 from '../assets/item/25036851-d89d-49d6-978f-f13be04e1f24.jpg';
-import img36 from '../assets/item/7a08220d-b9cb-4b2e-afc0-74f8fe3e7e10.jpg';
-import img37 from '../assets/item/7dd7c496-a11b-4dac-936b-7ca4e1460d63.jpg';
-import img38 from '../assets/item/1.webp';
-import img39 from '../assets/item/_DSC2040.jpg';
-import img40 from '../assets/item/MitiOffWhite3_1000x.webp';
-import img41 from '../assets/item/NovellaNobleBlack_1_1000x.webp';
-import img42 from '../assets/item/DSC08575-Edit_1000x.webp';
-import img43 from '../assets/item/DSC08597-Edit_1000x.webp';
-import img44 from '../assets/item/DaisyBlack_2_1000x.webp';
-import img45 from '../assets/item/DSC08626-Edit_1000x.webp';
+import img30 from '../../assets/item/Resize_Website4_0001_Layer_1.jpg';
+import img31 from '../../assets/item/Resize_Website4_0000_Layer_5.jpg';
+import img32 from '../../assets/item/Resize_Website4_0000__DSC5314.jpg';
+import img33 from '../../assets/item/07992722-fffc-49ce-a2e6-7a12fc519f80.jpg';
+import img34 from '../../assets/item/7a2b5053-afc7-430a-9efc-c0cebff6c483.jpg';
+import img35 from '../../assets/item/25036851-d89d-49d6-978f-f13be04e1f24.jpg';
+import img36 from '../../assets/item/7a08220d-b9cb-4b2e-afc0-74f8fe3e7e10.jpg';
+import img37 from '../../assets/item/7dd7c496-a11b-4dac-936b-7ca4e1460d63.jpg';
+import img38 from '../../assets/item/1.webp';
+import img39 from '../../assets/item/_DSC2040.jpg';
+import img40 from '../../assets/item/MitiOffWhite3_1000x.webp';
+import img41 from '../../assets/item/NovellaNobleBlack_1_1000x.webp';
+import img42 from '../../assets/item/DSC08575-Edit_1000x.webp';
+import img43 from '../../assets/item/DSC08597-Edit_1000x.webp';
+import img44 from '../../assets/item/DaisyBlack_2_1000x.webp';
+import img45 from '../../assets/item/DSC08626-Edit_1000x.webp';
 
 
 

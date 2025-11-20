@@ -1,29 +1,29 @@
-import img1 from '../assets/item/777-1633752199276.webp';
-import img2 from '../assets/item/1601371900721.png';
-import img3 from '../assets/item/1601370762537.png';
-import img4 from '../assets/item/untitled-1-1633954970602.webp';
-import img5 from '../assets/item/vim-dishwash-250-ml-1633954190582.webp';
-import img6 from '../assets/item/555-1633956195927.webp';
-import img7 from '../assets/item/fresh-paper-napkin-1646806592948.webp';
-import img8 from '../assets/item/bashundhara-hand-towel-box-250-pcs-removebg-preview-1658204215224.webp';
-import img9 from '../assets/item/all-out-ultra-liq-vaporizer-combo-1633500545912.webp';
-import img10 from '../assets/item/SAVLON-LIQUID-56-ML-1611640989951.webp';
-import img11 from '../assets/item/ai09wflv7og8jijogljglehxkgnueblz7ntar2ed-xl-1758091579140.webp';
-import img12 from '../assets/item/1601371263295.png';
-import img13 from '../assets/item/1605436989312.png';
-import img14 from '../assets/item/1605439136981.png';
-import img15 from '../assets/item/lactogen-2-350-gm-1643530931368.webp';
+import img1 from '../../assets/item/777-1633752199276.webp';
+import img2 from '../../assets/item/1601371900721.png';
+import img3 from '../../assets/item/1601370762537.png';
+import img4 from '../../assets/item/untitled-1-1633954970602.webp';
+import img5 from '../../assets/item/vim-dishwash-250-ml-1633954190582.webp';
+import img6 from '../../assets/item/555-1633956195927.webp';
+import img7 from '../../assets/item/fresh-paper-napkin-1646806592948.webp';
+import img8 from '../../assets/item/bashundhara-hand-towel-box-250-pcs-removebg-preview-1658204215224.webp';
+import img9 from '../../assets/item/all-out-ultra-liq-vaporizer-combo-1633500545912.webp';
+import img10 from '../../assets/item/SAVLON-LIQUID-56-ML-1611640989951.webp';
+import img11 from '../../assets/item/ai09wflv7og8jijogljglehxkgnueblz7ntar2ed-xl-1758091579140.webp';
+import img12 from '../../assets/item/1601371263295.png';
+import img13 from '../../assets/item/1605436989312.png';
+import img14 from '../../assets/item/1605439136981.png';
+import img15 from '../../assets/item/lactogen-2-350-gm-1643530931368.webp';
 
 
 // categoryImg
-import img30 from '../assets/item/1601372693749.png';
-import img31 from '../assets/item/1601379787220.png';
-import img32 from '../assets/item/1601373783017.png';
-import img33 from '../assets/item/spring-air-freshener-lemon-fresh-1643600130295.webp';
-import img34 from '../assets/item/untitled-1-1633955651876.webp';
-import img35 from '../assets/item/dr-rhazes-vegetable-fruit-wash-1634555280840.webp';
-import img36 from '../assets/item/xpel-aerosol-250-ml-1633955249191.webp';
-import img37 from '../assets/item/ACI-AEROSOL-SPRAY-250-ML-1611639884641.webp';
+import img30 from '../../assets/item/1601372693749.png';
+import img31 from '../../assets/item/1601379787220.png';
+import img32 from '../../assets/item/1601373783017.png';
+import img33 from '../../assets/item/spring-air-freshener-lemon-fresh-1643600130295.webp';
+import img34 from '../../assets/item/untitled-1-1633955651876.webp';
+import img35 from '../../assets/item/dr-rhazes-vegetable-fruit-wash-1634555280840.webp';
+import img36 from '../../assets/item/xpel-aerosol-250-ml-1633955249191.webp';
+import img37 from '../../assets/item/ACI-AEROSOL-SPRAY-250-ML-1611639884641.webp';
 
 
 

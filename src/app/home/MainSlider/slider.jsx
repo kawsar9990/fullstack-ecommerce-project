@@ -38,7 +38,7 @@ export default function Slider(){
     {
       id: 3,
       image: shari,
-      name: "New Trend Women Saree",
+      name: "New Trend Women Router",
       price: 4000,
       bg: "from-pink-500 to-rose-600"
     }

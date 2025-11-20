@@ -1,13 +1,13 @@
 'use client'
 
 
-
+import { Electronics } from "../../../content/All/allelectronics";
 
 
 import { useState } from "react";
 import { RingLoader } from "react-spinners";
 import Image from "next/image";
-import { Latest } from "../../../content/Latest/latest"
+
 
 
 
@@ -20,7 +20,7 @@ import "keen-slider/keen-slider.min.css"
 import Link from 'next/link'
 
 
-export default function LatestProduct(){
+export default function ElectronicsPro(){
      const [loading, setLoading] = useState(false);
    
 
@@ -69,7 +69,7 @@ export default function LatestProduct(){
 
 
  <div ref={sliderRef} className="keen-slider">
-{Latest.map(item => (
+{Electronics.map(item => (
  <div
   key={item.id}
   className="keen-slider__slide group mb-5 rounded-lg cursor-pointer shadow-lg flex flex-col justify-between"
@@ -81,16 +81,10 @@ export default function LatestProduct(){
   alt={item.name}
   width={300}
   height={200}
-  className="w-full h-[180px] object-cover rounded transition-all duration-500 group-hover:opacity-0"
+  className="w-full h-[180px] object-cover rounded transition-all duration-500 group-hover:scale-110"
 />
 
-<Image
-  src={item.hoverImg}
-  alt={item.name}
-  width={300}
-  height={200}
-  className="absolute top-0 left-0 w-full h-[180px] object-cover rounded opacity-0 transition-all duration-500 group-hover:opacity-100"
-/>
+
       <div className="absolute text-white top-1 left-1 rounded-lg font-bold p-1 bg-red-600">
         {item.discountPercent}
       </div>
@@ -112,8 +106,8 @@ export default function LatestProduct(){
       </div>
       <div className="text-[13px]">{item.ratestar}</div>
       <div className="flex items-center justify-between">
-        <code className="line-through text-gray-400">${item.oldprice}</code>
-        <code className="text-red-600 font-semibold">${item.price}</code>
+        <code className="line-through text-gray-400">{item.oldprice}</code>
+        <code className="text-red-600 font-semibold">{item.price}</code>
       </div>
     </div>
   )}

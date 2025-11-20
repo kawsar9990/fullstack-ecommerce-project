@@ -76,14 +76,14 @@ export default function ShopBox(){
 
 
 
-<div className={`grid grid-cols-2 gap-5 p-3 lg:grid-cols-4`}>
+<div className={`grid grid-cols-1 gap-5 p-3 lg:grid-cols-4`}>
 
 {product.map(i => (
   <div key={i.id} className={`p-2 bg-gradient-to-r ${i.bg} rounded-lg h-[180]`}>
 
 <div className='flex items-center px-5 py-5'>
   <div className='w-1/2'>
-    <img src={i.image.src} alt="" className='w-20'/>
+    <img src={i.image.src} alt="" className='w-25 md:w-20'/>
   </div>
   <div className='w-1/2'>
     <div className='text-black font-semibold'>By The Men Smart England Watch</div>
