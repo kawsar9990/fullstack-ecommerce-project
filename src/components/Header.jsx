@@ -12,15 +12,32 @@ import { faBagShopping, faBars, faBarsStaggered, faChevronDown, faHeart, faHouse
 
 library.add(faBarsStaggered,faChevronDown,faBars,faXmark,faHouse,faMagnifyingGlass,faBagShopping,faUser, faHeart)
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 
 import { useRouter } from "next/navigation"
 
 export default function Header(){
 
    const [sidebarcl, setsidebarcl] = useState(false)
+   const [sideDropdown, setsideDropdown] = useState(null);
 
-  const [sideDropdown, setsideDropdown] = useState(null);
+
+
+
+    const [FashionOpen, setFashionOpen] = useState(false);
+    const fashionTimer = useRef(null);
+
+    const [ElecOpen, setElecOpen] = useState(false);
+    const ElectronicsTimer = useRef(null);
+
+    const [BagOpen, setBagOpen] = useState(false);
+    const BagsTimer = useRef(null);
+
+    const [footOpen, setfootOpen] = useState(false);
+    const FootwearTimer = useRef(null);
+
+
+
 
 
     const toggleDropdown = (menu) => {
@@ -33,7 +50,14 @@ export default function Header(){
    
     const {setCategory} = MainProductRender();
 
+    const [text,setText]= useState("")
     const router = useRouter();
+    const handleSearch = (e) => {
+      e.preventDefault();
+      if(!text.trim()) return;
+
+      router.push(`/searchresult?search=${text}`)
+    }
   
     return(
 
@@ -62,15 +86,17 @@ export default function Header(){
     </div>
 
     <div className="w-full">
-        <form className="max-w-md mx-auto">   
+        <form className="max-w-md mx-auto"  onSubmit={handleSearch}>   
     <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
     <div className="relative">
         <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="..." />
+ <path
+  strokeLinecap="round" strokeLinejoin="round" d="M10.5 3a7.5 7.5 0 015.93 12.11l4.2 4.2a1 1 0 01-1.41 1.41l-4.2-4.2A7.5 7.5 0 1110.5 3z"
+/>
 </svg>
         </div>
-        <input type="search" id="default-search" className="block w-full p-4 ps-10 text-sm  border border-gray-300 rounded-lg bg-gray-200  text-black focus:outline-0" placeholder="Search For Products...." required />
+        <input type="search" id="default-search" value={text} onChange={(e)=> setText(e.target.value)} className="block w-full p-4 ps-10 text-sm  border border-gray-300 rounded-lg bg-gray-200  text-black focus:outline-0" placeholder="Search For Products...." required />
         <button type="submit" className="text-white absolute cursor-pointer end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 ">Search</button>
     </div>
 </form>
@@ -165,8 +191,8 @@ export default function Header(){
 
  {sideDropdown === "fashion" && (
           <div className="flex flex-col pl-5 pt-2">
-            <Link href={`/productpage`} onClick={()=> setCategory("WomenBags")} className="p-2 hover:bg-blue-50 hover:rounded-lg transition-all duration-300">Women</Link>
-            <Link href={`/productpage`} onClick={()=> setCategory("BagMen")} className="p-2 hover:bg-blue-50 hover:rounded-lg transition-all duration-300">Men</Link>
+            <Link href={`/productpage`} onClick={()=> setCategory("FashionWomen")} className="p-2 hover:bg-blue-50 hover:rounded-lg transition-all duration-300">Women</Link>
+            <Link href={`/productpage`} onClick={()=> setCategory("FashionMan")} className="p-2 hover:bg-blue-50 hover:rounded-lg transition-all duration-300">Men</Link>
           </div>
         )}
 
@@ -359,37 +385,47 @@ export default function Header(){
 <Link href={`/`} className="hover:text-red-500 font-semibold  cursor-pointer">Home</Link>
 
 
-<div className="relative font-semibold group">
+<div className="relative font-semibold group"
+onMouseEnter={()=> {
+ if(fashionTimer.current) clearTimeout(fashionTimer.current)
+  setFashionOpen(true)
+}}
+onMouseLeave={()=> {
+fashionTimer.current = setTimeout(()=> setFashionOpen(false), 100)
+}}>
    <Link href={`/productpage`} onClick={()=> setCategory("Fashion")} className=" hover:text-red-500 cursor-pointer"> Fashion</Link>
    
-    <ul 
-    className="absolute top-full left-0 min-w-[180px] bg-white shadow-lg rounded-lg 
-    flex flex-col items-start gap-2 py-3 pl-3 mt-1 
-    opacity-0 scale-95 pointer-events-none
-    group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
-    transition-all duration-300 ease-out z-50">
+{FashionOpen && (
+   <ul 
+    className="absolute top-full left-0 min-w-[180px] bg-white shadow-lg rounded-lg flex flex-col items-start gap-2 py-3 pl-3 mt-1 z-50">
         <Link href={`/productpage`} onClick={()=> setCategory("FashionWomen")} className=" hover:text-red-500 cursor-pointer">Women</Link>
         <Link href={`/productpage`} onClick={()=> setCategory("FashionMan")} className=" hover:text-red-500 cursor-pointer">Men</Link>
     </ul>
+)}
 
 </div>
 
 
 
 
-<div className="relative font-semibold group">
+<div className="relative font-semibold group"
+onMouseEnter={()=> {
+ if(ElectronicsTimer.current) clearTimeout(ElectronicsTimer.current)
+  setElecOpen(true)
+}}
+onMouseLeave={()=> {
+ElectronicsTimer.current = setTimeout(()=> setElecOpen(false), 100)
+}}>
    <Link  href={`/productpage`} onClick={()=> setCategory("Electronics")} className=" hover:text-red-500 cursor-pointer"> Electronics</Link>
    
-    <ul 
-     className="absolute top-full left-0 min-w-[180px] bg-white shadow-lg rounded-lg 
-    flex flex-col items-start gap-2 py-3 pl-3 mt-1 
-    opacity-0 scale-95 pointer-events-none
-    group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
-    transition-all duration-300 ease-out z-50">
+{ElecOpen && (
+   <ul 
+     className="absolute top-full left-0 min-w-[180px] bg-white shadow-lg rounded-lg flex flex-col items-start gap-2 py-3 pl-3 mt-1 z-50">
         <Link href={`/productpage`} onClick={()=> setCategory("Mobile")} className=" hover:text-red-500 cursor-pointer">Mobile</Link>
         <Link href={`/productpage`} onClick={()=> setCategory("Laptops")}  className=" hover:text-red-500 cursor-pointer">Leptops</Link>
         <Link  href={`/productpage`} onClick={()=> setCategory("TV")} className=" hover:text-red-500 cursor-pointer">Smart Watch</Link>
     </ul>
+)}
 
 </div>
 
@@ -397,35 +433,47 @@ export default function Header(){
 
 
 
-<div className="relative font-semibold group">
+<div className="relative font-semibold group"
+onMouseEnter={()=> {
+  if(BagsTimer.current) clearTimeout(BagsTimer.current)
+  setBagOpen(true)
+}}
+onMouseLeave={()=> {
+BagsTimer.current = setTimeout(()=> setBagOpen(false), 400)
+}}>
    <Link  href={`/productpage`} onClick={()=> setCategory("Bag")} className=" hover:text-red-500 cursor-pointer"> Bags</Link>
-   
+  
+{BagOpen && (
+     
     <ul 
-     className="absolute top-full left-0 min-w-[180px] bg-white shadow-lg rounded-lg 
-    flex flex-col items-start gap-2 py-3 pl-3 mt-1 
-    opacity-0 scale-95 pointer-events-none
-    group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
-    transition-all duration-300 ease-out z-50">
+     className="absolute top-full left-0 min-w-[180px] bg-white shadow-lg rounded-lg flex flex-col items-start gap-2 py-3 pl-3 mt-1 z-50">
         <Link  href={`/productpage`} onClick={()=> setCategory("BagMen")} className=" hover:text-red-500 cursor-pointer">Men Bags</Link>
         <Link  href={`/productpage`} onClick={()=> setCategory("WomenBags")} className=" hover:text-red-500 cursor-pointer">Women Bags</Link>
 </ul>
+)}
+
 </div>
 
 
 
 
-<div className="relative font-semibold group">
+<div className="relative font-semibold group"
+onMouseEnter={()=> {
+ if(FootwearTimer.current) clearTimeout(FootwearTimer.current)
+  setfootOpen(true)
+}}
+onMouseLeave={()=> {
+FootwearTimer.current = setTimeout(()=> setfootOpen(false), 100)
+}}>
    <Link href={`/productpage`} onClick={()=> setCategory("Footwear")} className=" hover:text-red-500 cursor-pointer"> Footwear</Link>
    
-    <ul 
-    className="absolute top-full left-0 min-w-[180px] bg-white shadow-lg rounded-lg 
-    flex flex-col items-start gap-2 py-3 pl-3 mt-1 
-    opacity-0 scale-95 pointer-events-none
-    group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto
-    transition-all duration-300 ease-out z-50">
+{footOpen && (
+     <ul 
+    className="absolute top-full left-0 min-w-[180px] bg-white shadow-lg rounded-lg flex flex-col items-start gap-2 py-3 pl-3 mt-1 z-50">
         <Link  href={`/productpage`} onClick={()=> setCategory("FootwearMen")} className=" hover:text-red-500 cursor-pointer">Men Footwear</Link>
         <Link  href={`/productpage`} onClick={()=> setCategory("WomensFootwear")} className=" hover:text-red-500 cursor-pointer">Women Footwear</Link>
 </ul>
+)}
 </div>
 
 

@@ -12,7 +12,7 @@ export default function SearchPage(){
         e.preventDefault();
         if(!text.trim()) return;
 
-        rounter.push(`/productpage?search=${text}`)
+        rounter.push(`/searchresult?search=${text}`)
     }
 
     return(

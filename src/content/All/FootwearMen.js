@@ -26,21 +26,16 @@ import img37 from '../../assets/item/mYWqR06703.jpg';
 
 
 
-
-
-
-
-
 export const FootwearMen = [
   {
     id: 1,
     image: img1,
     name: "Men's Classic Leather Loafers",
+    category: "Footwear",
     categoryImg: [img1, img30, img31],
-    category: "Men Footwear",
     title: "Stylish premium leather loafers perfect for office and casual wear.",
-    oldprice: "৳4500",
-    price: "৳3490",
+    oldprice: "$40.91",
+    price: "$31.73",
     discountPercent: "22%",
     ratestar: "⭐⭐⭐⭐⭐",
     review: "Excellent comfort and design. Perfect for formal looks."
@@ -49,11 +44,11 @@ export const FootwearMen = [
     id: 2,
     image: img2,
     name: "Men's Sports Running Shoes",
+    category: "Footwear",
     categoryImg: [img2, img32, img33],
-    category: "Men Footwear",
     title: "Lightweight breathable shoes for running and gym training.",
-    oldprice: "৳3800",
-    price: "৳2950",
+    oldprice: "$34.55",
+    price: "$26.82",
     discountPercent: "23%",
     ratestar: "⭐⭐⭐⭐☆",
     review: "Comfortable for long runs and durable sole quality."
@@ -62,11 +57,11 @@ export const FootwearMen = [
     id: 3,
     image: img3,
     name: "Men's Brown Oxford Shoes",
+    category: "Footwear",
     categoryImg: [img3, img34, img35],
-    category: "Men Footwear",
     title: "Elegant Oxford shoes made from high-quality polished leather.",
-    oldprice: "৳5200",
-    price: "৳4190",
+    oldprice: "$47.27",
+    price: "$38.09",
     discountPercent: "20%",
     ratestar: "⭐⭐⭐☆☆",
     review: "Stylish but slightly stiff at first wear."
@@ -75,11 +70,11 @@ export const FootwearMen = [
     id: 4,
     image: img4,
     name: "Men's Casual Slip-On Sneakers",
+    category: "Footwear",
     categoryImg: [img4, img36, img37],
-    category: "Men Footwear",
     title: "Trendy slip-on sneakers suitable for daily casual use.",
-    oldprice: "৳3200",
-    price: "৳2490",
+    oldprice: "$29.09",
+    price: "$22.64",
     discountPercent: "22%",
     ratestar: "⭐⭐⭐⭐☆",
     review: "Easy to wear and very comfortable for walking."
@@ -88,11 +83,11 @@ export const FootwearMen = [
     id: 5,
     image: img5,
     name: "Men's Suede Desert Boots",
+    category: "Footwear",
     categoryImg: [img5, img30, img31],
-    category: "Men Footwear",
     title: "Classic suede boots with a durable sole and soft finish.",
-    oldprice: "৳5500",
-    price: "৳4390",
+    oldprice: "$50.00",
+    price: "$39.91",
     discountPercent: "20%",
     ratestar: "⭐⭐⭐⭐⭐",
     review: "Looks premium and fits perfectly. Highly recommended."
@@ -101,11 +96,11 @@ export const FootwearMen = [
     id: 6,
     image: img6,
     name: "Men's Training Sneakers",
+    category: "Footwear",
     categoryImg: [img6, img32, img33],
-    category: "Men Footwear",
     title: "Flexible and lightweight sneakers ideal for gym workouts.",
-    oldprice: "৳3700",
-    price: "৳2890",
+    oldprice: "$33.64",
+    price: "$26.27",
     discountPercent: "22%",
     ratestar: "⭐⭐⭐☆☆",
     review: "Nice grip and breathable design, good for workouts."
@@ -114,11 +109,11 @@ export const FootwearMen = [
     id: 7,
     image: img7,
     name: "Men's Classic Black Dress Shoes",
+    category: "Footwear",
     categoryImg: [img7, img34, img35],
-    category: "Men Footwear",
     title: "Formal black dress shoes for professional and business events.",
-    oldprice: "৳4900",
-    price: "৳3990",
+    oldprice: "$44.55",
+    price: "$36.27",
     discountPercent: "18%",
     ratestar: "⭐⭐⭐⭐☆",
     review: "Great for formal wear, elegant and durable."
@@ -127,11 +122,11 @@ export const FootwearMen = [
     id: 8,
     image: img8,
     name: "Men's Comfort Sandals",
+    category: "Footwear",
     categoryImg: [img8, img36, img37],
-    category: "Men Footwear",
     title: "Comfortable leather sandals perfect for everyday summer wear.",
-    oldprice: "৳2800",
-    price: "৳2190",
+    oldprice: "$25.45",
+    price: "$19.91",
     discountPercent: "21%",
     ratestar: "⭐⭐⭐⭐⭐",
     review: "Very soft and durable leather. Ideal for hot weather."
@@ -140,11 +135,11 @@ export const FootwearMen = [
     id: 9,
     image: img9,
     name: "Men's Hiking Trek Boots",
+    category: "Footwear",
     categoryImg: [img9, img30, img31],
-    category: "Men Footwear",
     title: "Rugged outdoor boots built for hiking and tough conditions.",
-    oldprice: "৳6200",
-    price: "৳4890",
+    oldprice: "$56.36",
+    price: "$44.45",
     discountPercent: "21%",
     ratestar: "⭐⭐⭐⭐☆",
     review: "Strong grip, perfect for mountain and outdoor trips."
@@ -153,20 +148,13 @@ export const FootwearMen = [
     id: 10,
     image: img10,
     name: "Men's Streetwear Sneakers",
+    category: "Footwear",
     categoryImg: [img10, img32, img33],
-    category: "Men Footwear",
     title: "Trendy sneakers with a stylish urban design for daily use.",
-    oldprice: "৳4200",
-    price: "৳3290",
+    oldprice: "$38.18",
+    price: "$29.91",
     discountPercent: "22%",
     ratestar: "⭐⭐⭐☆☆",
     review: "Looks stylish, fits well with jeans and casual outfits."
   },
 ];
-
-
-
-
-
-
-

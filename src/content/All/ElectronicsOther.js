@@ -29,207 +29,218 @@ import img37 from '../../assets/item/omen-27-01-228x228.webp';
 
 
 
-
 export const TV = [
   {
     id: 1,
     image: img1,
     name: "SINGER S32 SLE32E3AGOTV 32 Inch HD Android Google TV",
     categoryImg: [img1, img30, img31],
-    category: "Smart TV",
+    catetitle: "Smart TV",
     title: "৩২ ইঞ্চি HD Android Google TV, কালার ও সাউন্ড কোয়ালিটি উজ্জ্বল",
-    oldprice: "৳34,900",
-    price: "৳29,900",
+    oldprice: "$317.27",
+    price: "$271.82",
     discountPercent: "14%",
     ratestar: "⭐⭐⭐⭐⭐",
-    review: "এই টিভিটা দামে ও কোয়ালিটিতে অসাধারণ। কালার উজ্জ্বল এবং ইউটিউব ও গুগল টিভি স্মুথ।"
+    review: "এই টিভিটা দামে ও কোয়ালিটিতে অসাধারণ। কালার উজ্জ্বল এবং ইউটিউব ও গুগল টিভি স্মুথ।",
+    category: "Electronics"
   },
   {
     id: 2,
     image: img2,
     name: "HP Series 527SF 27, 100Hz FHD IPS Monitor",
     categoryImg: [img2, img32, img33],
-    category: "Monitor",
+    catetitle: "Monitor",
     title: "২৭ ইঞ্চি FHD IPS মনিটর, ১০০Hz রিফ্রেশ রেট সহ, গেমিং ও অফিসের জন্য পারফেক্ট",
-    oldprice: "৳26,500",
-    price: "৳22,900",
+    oldprice: "$240.91",
+    price: "$208.18",
     discountPercent: "14%",
     ratestar: "⭐⭐⭐⭐☆",
-    review: "ফাস্ট রেসপন্স এবং রিফ্রেশ রেটের কারণে গেমিং ও অফিস কাজে খুব ভালো।"
+    review: "ফাস্ট রেসপন্স এবং রিফ্রেশ রেটের কারণে গেমিং ও অফিস কাজে খুব ভালো।",
+    category: "Electronics"
   },
   {
     id: 3,
     image: img3,
     name: "Corsair XENEON 32QHD165 32 inch QHD 165Hz Gaming Monitor",
     categoryImg: [img3, img34, img35],
-    category: "Gaming Monitor",
+    catetitle: "Gaming Monitor",
     title: "৩২ ইঞ্চি QHD 165Hz গেমিং মনিটর, HDR এবং ভিজ্যুয়াল এক্সপেরিয়েন্স অসাধারণ",
-    oldprice: "৳75,000",
-    price: "৳69,500",
+    oldprice: "$681.82",
+    price: "$631.82",
     discountPercent: "7%",
     ratestar: "⭐⭐⭐☆☆",
-    review: "গেমিং প্রফেশনালদের জন্য উপযুক্ত। রঙ এবং রিফ্রেশ রেট চমৎকার।"
+    review: "গেমিং প্রফেশনালদের জন্য উপযুক্ত। রঙ এবং রিফ্রেশ রেট চমৎকার।",
+    category: "Electronics"
   },
   {
     id: 4,
     image: img4,
     name: "AMD Ryzen 9 9950X3D Gaming PC",
     categoryImg: [img4, img36, img37],
-    category: "Gaming PC",
+    catetitle: "Gaming PC",
     title: "AMD Ryzen 9 9950X3D, 32GB RAM, 1TB SSD, Ultra Gaming Performance PC",
-    oldprice: "৳2,50,000",
-    price: "৳2,35,000",
+    oldprice: "$2272.73",
+    price: "$2136.36",
     discountPercent: "6%",
     ratestar: "⭐⭐⭐⭐☆",
-    review: "অত্যাধুনিক প্রসেসর ও গ্রাফিক্স কার্ডের জন্য গেমিং ও মাল্টিটাস্কিংতে সেরা।"
+    review: "অত্যাধুনিক প্রসেসর ও গ্রাফিক্স কার্ডের জন্য গেমিং ও মাল্টিটাস্কিংতে সেরা।",
+    category: "Electronics"
   },
   {
     id: 5,
     image: img5,
     name: "Viewsonic XG275D1-4K 27,4K UHD 160Hz IPS Gaming Monitor",
     categoryImg: [img5, img30, img31],
-    category: "Gaming Monitor",
+    catetitle: "Gaming Monitor",
     title: "২৭ ইঞ্চি 4K UHD 160Hz IPS মনিটর, HDR সমর্থনসহ, গেমিং এক্সপেরিয়েন্সের জন্য পারফেক্ট",
-    oldprice: "৳1,05,000",
-    price: "৳99,500",
+    oldprice: "$954.55",
+    price: "$904.55",
     discountPercent: "5%",
     ratestar: "⭐⭐⭐⭐⭐",
-    review: "উচ্চ রেজোলিউশন ও হাই রিফ্রেশ রেটের জন্য গেমারদের সেরা পছন্দ।"
+    review: "উচ্চ রেজোলিউশন ও হাই রিফ্রেশ রেটের জন্য গেমারদের সেরা পছন্দ।",
+    category: "Electronics"
   },
   {
     id: 6,
     image: img6,
     name: "LG 27GR95QE-B 27-Inch UltraGear OLED QHD 240Hz 0.03ms Gaming Monitor",
     categoryImg: [img6, img32, img33],
-    category: "Gaming Monitor",
+    catetitle: "Gaming Monitor",
     title: "OLED QHD 27 ইঞ্চি, 240Hz এবং 0.03ms রেসপন্স, HDR10 সমর্থন",
-    oldprice: "৳1,85,000",
-    price: "৳1,75,500",
+    oldprice: "$1681.82",
+    price: "$1595.45",
     discountPercent: "5%",
     ratestar: "⭐⭐⭐☆☆",
-    review: "অত্যন্ত দ্রুত রেসপন্স ও OLED কালার মানের জন্য হাই-এন্ড গেমিং মনিটর।"
+    review: "অত্যন্ত দ্রুত রেসপন্স ও OLED কালার মানের জন্য হাই-এন্ড গেমিং মনিটর।",
+    category: "Electronics"
   },
   {
     id: 7,
     image: img7,
     name: "Acer SA222Q Ultra Slim 21.5, 100Hz IPS FHD Monitor",
     categoryImg: [img7, img34, img35],
-    category: "Monitor",
+    catetitle: "Monitor",
     title: "২১.৫ ইঞ্চি Ultra Slim FHD IPS মনিটর, 100Hz রিফ্রেশ রেট",
-    oldprice: "৳18,500",
-    price: "৳16,900",
+    oldprice: "$168.18",
+    price: "$153.64",
     discountPercent: "9%",
     ratestar: "⭐⭐⭐⭐☆",
-    review: "Slim design ও সুন্দর রঙের জন্য অফিস ও হোম ইউজের জন্য ভালো।"
+    review: "Slim design ও সুন্দর রঙের জন্য অফিস ও হোম ইউজের জন্য ভালো।",
+    category: "Electronics"
   },
   {
     id: 8,
     image: img8,
     name: "Acer Predator XB253Q F 24.5, FHD IPS Gaming Monitor",
     categoryImg: [img8, img36, img37],
-    category: "Gaming Monitor",
+    catetitle: "Gaming Monitor",
     title: "২৪.৫ ইঞ্চি FHD IPS গেমিং মনিটর, 240Hz রিফ্রেশ এবং G-Sync সমর্থন",
-    oldprice: "৳92,500",
-    price: "৳88,000",
+    oldprice: "$840.91",
+    price: "$800.00",
     discountPercent: "5%",
     ratestar: "⭐⭐⭐⭐⭐",
-    review: "গেমারদের জন্য গেমিং এক্সপেরিয়েন্স অসাধারণ। কালার ও ফ্লিকর কম।"
+    review: "গেমারদের জন্য গেমিং এক্সপেরিয়েন্স অসাধারণ। কালার ও ফ্লিকর কম।",
+    category: "Electronics"
   },
   {
     id: 9,
     image: img9,
     name: "MSI MPG 341CQPX QD-OLED 34, UWQHD 240Hz Curved Gaming Monitor",
     categoryImg: [img9, img30, img31],
-    category: "Gaming Monitor",
+    catetitle: "Gaming Monitor",
     title: "৩৪ ইঞ্চি UWQHD Curved OLED, 240Hz, HDR10+ সমর্থন",
-    oldprice: "৳2,35,000",
-    price: "৳2,19,500",
+    oldprice: "$2136.36",
+    price: "$1995.45",
     discountPercent: "7%",
     ratestar: "⭐⭐⭐⭐☆",
-    review: "Curved OLED স্ক্রিন এবং দ্রুত রিফ্রেশের জন্য প্রফেশনাল গেমারদের জন্য।"
+    review: "Curved OLED স্ক্রিন এবং দ্রুত রিফ্রেশের জন্য প্রফেশনাল গেমারদের জন্য।",
+    category: "Electronics"
   },
   {
     id: 10,
     image: img10,
     name: "HP E27 G5 27, FHD IPS Monitor",
     categoryImg: [img10, img32, img33],
-    category: "Monitor",
+    catetitle: "Monitor",
     title: "২৭ ইঞ্চি FHD IPS মনিটর, অফিস ও হোম ইউজের জন্য পারফেক্ট",
-    oldprice: "৳24,500",
-    price: "৳22,000",
+    oldprice: "$222.73",
+    price: "$200.00",
     discountPercent: "10%",
     ratestar: "⭐⭐⭐☆☆",
-    review: "স্ক্রিন কালার এবং ভিউয়িং অ্যাঙ্গেল খুব ভালো। দৈনন্দিন ব্যবহার উপযোগী।"
+    review: "স্ক্রিন কালার এবং ভিউয়িং অ্যাঙ্গেল খুব ভালো। দৈনন্দিন ব্যবহার উপযোগী।",
+    category: "Electronics"
   },
   {
     id: 11,
     image: img11,
     name: "HP E24t G5 23.8, FHD Touch Monitor",
     categoryImg: [img11, img34, img35],
-    category: "Touch Monitor",
+    catetitle: "Touch Monitor",
     title: "২৩.৮ ইঞ্চি FHD টাচ স্ক্রিন, অফিস ও শিক্ষার জন্য আদর্শ",
-    oldprice: "৳28,000",
-    price: "৳25,500",
+    oldprice: "$254.55",
+    price: "$231.82",
     discountPercent: "9%",
     ratestar: "⭐⭐⭐⭐☆",
-    review: "টাচ ফাংশন কাজ করছে স্মুথ, অফিস ও শিক্ষার জন্য একদম ঠিক।"
+    review: "টাচ ফাংশন কাজ করছে স্মুথ, অফিস ও শিক্ষার জন্য একদম ঠিক।",
+    category: "Electronics"
   },
   {
     id: 12,
     image: img12,
     name: "HP E27K G5 27, 4K UHD IPS Type-C Monitor",
     categoryImg: [img12, img36, img37],
-    category: "Monitor",
+    catetitle: "Monitor",
     title: "২৭ ইঞ্চি 4K UHD IPS মনিটর, Type-C পোর্ট সমর্থন, HDR10 সমর্থন",
-    oldprice: "৳75,000",
-    price: "৳69,500",
+    oldprice: "$681.82",
+    price: "$631.82",
     discountPercent: "7%",
     ratestar: "⭐⭐⭐⭐⭐",
-    review: "4K UHD ডিসপ্লে এবং Type-C কানেক্টিভিটির জন্য আধুনিক অফিস ও মাল্টিমিডিয়া কাজে সেরা।"
+    review: "4K UHD ডিসপ্লে এবং Type-C কানেক্টিভিটির জন্য আধুনিক অফিস ও মাল্টিমিডিয়া কাজে সেরা।",
+    category: "Electronics"
   },
   {
     id: 13,
     image: img13,
     name: "Daewoo 43DM54UAB 43, 4K Android Google Smart TV",
     categoryImg: [img13, img30, img31],
-    category: "Smart TV",
+    catetitle: "Smart TV",
     title: "৪৩ ইঞ্চি 4K Android Google Smart TV, HDR এবং Dolby Audio সমর্থন",
-    oldprice: "৳58,000",
-    price: "৳52,500",
+    oldprice: "$527.27",
+    price: "$477.27",
     discountPercent: "9%",
     ratestar: "⭐⭐⭐⭐☆",
-    review: "৪৩ ইঞ্চি বড় স্ক্রিন এবং স্পষ্ট কালারের জন্য পারফেক্ট হোম এন্টারটেইনমেন্ট।"
+    review: "৪৩ ইঞ্চি বড় স্ক্রিন এবং স্পষ্ট কালারের জন্য পারফেক্ট হোম এন্টারটেইনমেন্ট।",
+    category: "Electronics"
   },
   {
     id: 14,
     image: img14,
     name: "TCL 43S5K 43, FHD QLED Smart Google TV",
     categoryImg: [img14, img32, img33],
-    category: "Smart TV",
+    catetitle: "Smart TV",
     title: "৪৩ ইঞ্চি FHD QLED Smart TV, Google TV এবং HDR সমর্থন",
-    oldprice: "৳47,500",
-    price: "৳43,500",
+    oldprice: "$431.82",
+    price: "$395.45",
     discountPercent: "8%",
     ratestar: "⭐⭐⭐☆☆",
-    review: "স্মার্ট ফিচার ও কালার কোয়ালিটি খুব ভালো, পরিবারে সিনেমা দেখার জন্য উপযুক্ত।"
+    review: "স্মার্ট ফিচার ও কালার কোয়ালিটি খুব ভালো, পরিবারে সিনেমা দেখার জন্য উপযুক্ত।",
+    category: "Electronics"
   },
   {
     id: 15,
     image: img15,
     name: "Haier H43P7UX 43 Inch Voice Control HQLED 4K Smart Google TV",
     categoryImg: [img15, img34, img35],
-    category: "Smart TV",
+    catetitle: "Smart TV",
     title: "৪৩ ইঞ্চি HQLED 4K Smart TV, ভয়েস কন্ট্রোল ও HDR সমর্থন",
-    oldprice: "৳55,500",
-    price: "৳50,500",
+    oldprice: "$504.55",
+    price: "$459.09",
     discountPercent: "9%",
     ratestar: "⭐⭐⭐⭐☆",
-    review: "ভয়েস কন্ট্রোল এবং 4K HQLED স্ক্রিনের জন্য হোম থিয়েটার অভিজ্ঞতা অসাধারণ।"
+    review: "ভয়েস কন্ট্রোল এবং 4K HQLED স্ক্রিনের জন্য হোম থিয়েটার অভিজ্ঞতা অসাধারণ।",
+    category: "Electronics"
   }
 ];
-
-
-
 
 
 

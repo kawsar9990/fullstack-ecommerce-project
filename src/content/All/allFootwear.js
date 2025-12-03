@@ -56,262 +56,282 @@ export const Footwear = [
     image: img1,
     name: "Men's Classic Leather Loafers",
     categoryImg: [img10, img30, img31],
-    category: "Men Footwear",
+    catetitle: "Men Footwear",
     title: "Stylish premium leather loafers perfect for office and casual wear.",
-    oldprice: "৳4500",
-    price: "৳3490",
+    oldprice: "$40.91",
+    price: "$31.73",
     discountPercent: "22%",
     ratestar: "⭐⭐⭐⭐⭐",
-    review: "Excellent comfort and design. Perfect for formal looks."
-  },
-  {
+    review: "Excellent comfort and design. Perfect for formal looks.",
+    category: "Footwear"
+},
+{
     id: 2,
     image: img2,
     name: "Men's Sports Running Shoes",
     categoryImg: [img2, img32, img33],
-    category: "Men Footwear",
+    catetitle: "Men Footwear",
     title: "Lightweight breathable shoes for running and gym training.",
-    oldprice: "৳3800",
-    price: "৳2950",
+    oldprice: "$34.55",
+    price: "$26.82",
     discountPercent: "23%",
     ratestar: "⭐⭐⭐⭐☆",
-    review: "Comfortable for long runs and durable sole quality."
-  },
-  {
+    review: "Comfortable for long runs and durable sole quality.",
+    category: "Footwear"
+},
+{
     id: 3,
     image: img3,
     name: "Men's Brown Oxford Shoes",
     categoryImg: [img3, img34, img35],
-    category: "Men Footwear",
+    catetitle: "Men Footwear",
     title: "Elegant Oxford shoes made from high-quality polished leather.",
-    oldprice: "৳5200",
-    price: "৳4190",
+    oldprice: "$47.27",
+    price: "$38.09",
     discountPercent: "20%",
     ratestar: "⭐⭐⭐☆☆",
-    review: "Stylish but slightly stiff at first wear."
-  },
-  {
+    review: "Stylish but slightly stiff at first wear.",
+    category: "Footwear"
+},
+{
     id: 4,
     image: img4,
     name: "Men's Casual Slip-On Sneakers",
     categoryImg: [img4, img36, img37],
-    category: "Men Footwear",
+    catetitle: "Men Footwear",
     title: "Trendy slip-on sneakers suitable for daily casual use.",
-    oldprice: "৳3200",
-    price: "৳2490",
+    oldprice: "$29.09",
+    price: "$22.64",
     discountPercent: "22%",
     ratestar: "⭐⭐⭐⭐☆",
-    review: "Easy to wear and very comfortable for walking."
-  },
-  {
+    review: "Easy to wear and very comfortable for walking.",
+    category: "Footwear"
+},
+{
     id: 5,
     image: img5,
     name: "Men's Suede Desert Boots",
     categoryImg: [img5, img30, img31],
-    category: "Men Footwear",
+    catetitle: "Men Footwear",
     title: "Classic suede boots with a durable sole and soft finish.",
-    oldprice: "৳5500",
-    price: "৳4390",
+    oldprice: "$50.00",
+    price: "$39.91",
     discountPercent: "20%",
     ratestar: "⭐⭐⭐⭐⭐",
-    review: "Looks premium and fits perfectly. Highly recommended."
-  },
-  {
+    review: "Looks premium and fits perfectly. Highly recommended.",
+    category: "Footwear"
+},
+{
     id: 6,
     image: img6,
     name: "Men's Training Sneakers",
     categoryImg: [img6, img32, img33],
-    category: "Men Footwear",
+    catetitle: "Men Footwear",
     title: "Flexible and lightweight sneakers ideal for gym workouts.",
-    oldprice: "৳3700",
-    price: "৳2890",
+    oldprice: "$33.64",
+    price: "$26.27",
     discountPercent: "22%",
     ratestar: "⭐⭐⭐☆☆",
-    review: "Nice grip and breathable design, good for workouts."
-  },
-  {
+    review: "Nice grip and breathable design, good for workouts.",
+    category: "Footwear"
+},
+{
     id: 7,
     image: img7,
     name: "Men's Classic Black Dress Shoes",
     categoryImg: [img7, img34, img35],
-    category: "Men Footwear",
+    catetitle: "Men Footwear",
     title: "Formal black dress shoes for professional and business events.",
-    oldprice: "৳4900",
-    price: "৳3990",
+    oldprice: "$44.55",
+    price: "$36.27",
     discountPercent: "18%",
     ratestar: "⭐⭐⭐⭐☆",
-    review: "Great for formal wear, elegant and durable."
-  },
-  {
+    review: "Great for formal wear, elegant and durable.",
+    category: "Footwear"
+},
+{
     id: 8,
     image: img8,
     name: "Men's Comfort Sandals",
     categoryImg: [img8, img36, img37],
-    category: "Men Footwear",
+    catetitle: "Men Footwear",
     title: "Comfortable leather sandals perfect for everyday summer wear.",
-    oldprice: "৳2800",
-    price: "৳2190",
+    oldprice: "$25.45",
+    price: "$19.91",
     discountPercent: "21%",
     ratestar: "⭐⭐⭐⭐⭐",
-    review: "Very soft and durable leather. Ideal for hot weather."
-  },
-  {
+    review: "Very soft and durable leather. Ideal for hot weather.",
+    category: "Footwear"
+},
+{
     id: 9,
     image: img9,
     name: "Men's Hiking Trek Boots",
     categoryImg: [img9, img30, img31],
-    category: "Men Footwear",
+    catetitle: "Men Footwear",
     title: "Rugged outdoor boots built for hiking and tough conditions.",
-    oldprice: "৳6200",
-    price: "৳4890",
+    oldprice: "$56.36",
+    price: "$44.45",
     discountPercent: "21%",
     ratestar: "⭐⭐⭐⭐☆",
-    review: "Strong grip, perfect for mountain and outdoor trips."
-  },
-  {
+    review: "Strong grip, perfect for mountain and outdoor trips.",
+    category: "Footwear"
+},
+{
     id: 10,
     image: img10,
     name: "Men's Streetwear Sneakers",
     categoryImg: [img10, img32, img33],
-    category: "Men Footwear",
+    catetitle: "Men Footwear",
     title: "Trendy sneakers with a stylish urban design for daily use.",
-    oldprice: "৳4200",
-    price: "৳3290",
+    oldprice: "$38.18",
+    price: "$29.91",
     discountPercent: "22%",
     ratestar: "⭐⭐⭐☆☆",
-    review: "Looks stylish, fits well with jeans and casual outfits."
-  }, {
+    review: "Looks stylish, fits well with jeans and casual outfits.",
+    category: "Footwear"
+},
+{
     id: 11,
     image: img11,
     name: "Women's Casual White Sneakers",
     categoryImg: [img11, img39, img38],
-    category: "Women's Footwear",
+    catetitle: "Women's Footwear",
     title: "Trendy and comfortable white sneakers perfect for daily wear and outings.",
-    oldprice: "৳3200",
-    price: "৳2590",
+    oldprice: "$29.09",
+    price: "$23.55",
     discountPercent: "19%",
     ratestar: "⭐⭐⭐⭐⭐",
-    review: "Super comfy and stylish. Matches almost any outfit!"
-  },
-  {
+    review: "Super comfy and stylish. Matches almost any outfit!",
+    category: "Footwear"
+},
+{
     id: 12,
     image: img12,
     name: "Women's Elegant Heeled Sandals",
     categoryImg: [img12, img42, img43],
-    category: "Women's Footwear",
+    catetitle: "Women's Footwear",
     title: "Classy heeled sandals with soft sole and durable straps for evening wear.",
-    oldprice: "৳2800",
-    price: "৳2250",
+    oldprice: "$25.45",
+    price: "$20.45",
     discountPercent: "20%",
     ratestar: "⭐⭐⭐⭐☆",
-    review: "Looks premium and feels comfortable for long hours."
-  },
-  {
+    review: "Looks premium and feels comfortable for long hours.",
+    category: "Footwear"
+},
+{
     id: 13,
     image: img13,
     name: "Women's Flat Slip-on Sandals",
     categoryImg: [img13, img44, img45],
-    category: "Women's Footwear",
+    catetitle: "Women's Footwear",
     title: "Lightweight slip-on flats made with anti-slip rubber sole.",
-    oldprice: "৳1500",
-    price: "৳1150",
+    oldprice: "$13.64",
+    price: "$10.45",
     discountPercent: "23%",
     ratestar: "⭐⭐⭐☆☆",
-    review: "Good quality but slightly tight fitting."
-  },
-  {
+    review: "Good quality but slightly tight fitting.",
+    category: "Footwear"
+},
+{
     id: 14,
     image: img14,
     name: "Women's Running Sports Shoes",
     categoryImg: [img14, img40, img38],
-    category: "Women's Footwear",
+    catetitle: "Women's Footwear",
     title: "Breathable running shoes for gym, walking, and outdoor activities.",
-    oldprice: "৳4200",
-    price: "৳3390",
+    oldprice: "$38.18",
+    price: "$30.82",
     discountPercent: "19%",
     ratestar: "⭐⭐⭐⭐☆",
-    review: "Perfect for workouts and daily walking."
-  },
-  {
+    review: "Perfect for workouts and daily walking.",
+    category: "Footwear"
+},
+{
     id: 15,
     image: img15,
     name: "Women's Stylish Block Heels",
     categoryImg: [img15, img39, img41],
-    category: "Women's Footwear",
+    catetitle: "Women's Footwear",
     title: "Trendy block heels ideal for office, parties, and special events.",
-    oldprice: "৳3600",
-    price: "৳2890",
+    oldprice: "$32.73",
+    price: "$26.27",
     discountPercent: "20%",
     ratestar: "⭐⭐⭐⭐⭐",
-    review: "Very elegant look. Comfortable for long wear."
-  },
-  {
+    review: "Very elegant look. Comfortable for long wear.",
+    category: "Footwear"
+},
+{
     id: 16,
     image: img16,
     name: "Women's Beach Flip-Flops",
     categoryImg: [img16, img42, img43],
-    category: "Women's Footwear",
+    catetitle: "Women's Footwear",
     title: "Soft rubber flip-flops designed for casual beach and poolside use.",
-    oldprice: "৳1000",
-    price: "৳790",
+    oldprice: "$9.09",
+    price: "$7.18",
     discountPercent: "21%",
     ratestar: "⭐⭐⭐☆☆",
-    review: "Simple and durable, good for casual use."
-  },
-  {
+    review: "Simple and durable, good for casual use.",
+    category: "Footwear"
+},
+{
     id: 17,
     image: img17,
     name: "Women's Formal Loafers",
     categoryImg: [img17, img44, img45],
-    category: "Women's Footwear",
+    catetitle: "Women's Footwear",
     title: "Elegant loafers with premium faux leather finish for a classy look.",
-    oldprice: "৳2700",
-    price: "৳2150",
+    oldprice: "$24.55",
+    price: "$19.55",
     discountPercent: "20%",
     ratestar: "⭐⭐⭐⭐☆",
-    review: "Great quality and very comfortable fit."
-  },
-  {
+    review: "Great quality and very comfortable fit.",
+    category: "Footwear"
+},
+{
     id: 18,
     image: img18,
     name: "Women's Ankle Boots",
     categoryImg: [img18, img38, img39],
-    category: "Women's Footwear",
+    catetitle: "Women's Footwear",
     title: "Chic ankle boots with soft inner lining for cozy winter wear.",
-    oldprice: "৳4800",
-    price: "৳3790",
+    oldprice: "$43.64",
+    price: "$34.45",
     discountPercent: "21%",
     ratestar: "⭐⭐⭐⭐⭐",
-    review: "Looks stunning and feels warm. Perfect for winter."
-  },
-  {
+    review: "Looks stunning and feels warm. Perfect for winter.",
+    category: "Footwear"
+},
+{
     id: 19,
     image: img19,
     name: "Women's Wedge Sandals",
     categoryImg: [img19, img42, img40],
-    category: "Women's Footwear",
+    catetitle: "Women's Footwear",
     title: "Comfortable wedge sandals designed with anti-slip sole.",
-    oldprice: "৳2400",
-    price: "৳1890",
+    oldprice: "$21.82",
+    price: "$17.18",
     discountPercent: "21%",
     ratestar: "⭐⭐⭐⭐☆",
-    review: "Nice design and perfect height. Loved it!"
-  },
-  {
+    review: "Nice design and perfect height. Loved it!",
+    category: "Footwear"
+},
+{
     id: 20,
     image: img20,
     name: "Women's Casual Canvas Shoes",
     categoryImg: [img20, img39, img45],
-    category: "Women's Footwear",
+    catetitle: "Women's Footwear",
     title: "Soft and breathable canvas shoes for casual everyday style.",
-    oldprice: "৳2200",
-    price: "৳1750",
+    oldprice: "$20.00",
+    price: "$15.91",
     discountPercent: "20%",
     ratestar: "⭐⭐⭐☆☆",
-    review: "Decent quality for the price. Looks cool and trendy."
-  },
+    review: "Decent quality for the price. Looks cool and trendy.",
+    category: "Footwear"
+}
 ];
-
 
 
 

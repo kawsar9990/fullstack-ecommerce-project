@@ -13,4 +13,7 @@ account -- checkout
 redux, express, firebase, mongodb, mongose, jwt
 
 
-mision product e css diya edit korte hobe
+potita product er route kore vitor e qrcode barcode lagabu jeiane jeikane use kora jeiane
+tarpor contact page ew lagabu ,all product e amar name use kora
+tarpor checkout page qrcode , barcode use kora 
+sobjagai amar name use...

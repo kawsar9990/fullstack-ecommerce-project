@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       <link rel="shortcut icon" href="/icon.png" type="image/x-icon" />
  
 
-      <body>
+      <body cz-shortcut-listen="true">
        <MainProduct>
         {!hideHeaderFooter && <Header />}
         <main>  

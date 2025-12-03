@@ -98,7 +98,7 @@ export default function FeaturedProducts(){
   :
   (
     <div className="p-2 flex flex-col gap-1 flex-grow">
-      <div className="text-gray-400 text-[10px]">{item.category}</div>
+      <div className="text-gray-400 text-[10px]">{item.catetitle}</div>
       <div className="text-black text-[12px] line-clamp-2 h-[32px]">
         {item.name}
       </div>
